@@ -8,7 +8,7 @@
 - `sudo apt install tree` : 폴더의 구조를 살펴볼 때 유용
 
 ## 예제
-- [첫 번째 장고 앱 작성](https://docs.djangoproject.com/ko/2.1/intro/tutorial01/)
+- 첫 번째 장고 앱 작성[원문](https://docs.djangoproject.com/ko/2.1/intro/tutorial01/)
   - `python3 -m django --version` : 장고 버전 확인
   - `mkdir jangoTest` : 장고 베이스 디렉토리 생성
   - `cd jangoTest` : 장고 베이스 디렉토리로 진입
