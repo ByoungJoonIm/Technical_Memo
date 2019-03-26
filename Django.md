@@ -99,6 +99,77 @@
     admin.site.register(Question)
     ```
   - 사이트 새로고침 후 POLLS 메뉴가 생성된 것을 확인
+- 첫 번째 장고 앱 작성(part3)[[원문](https://docs.djangoproject.com/ko/2.1/intro/tutorial03/)]
+  - `vi polls/views.py`
+    ```
+    ##원래의 코드에 아랫 부분을 추가합니다.
+    def detail(request, question_id):
+    return HttpResponse("You're looking at question %s." % question_id)
+
+    def results(request, question_id):
+    response = "You're looking at the results of question %s."
+    return HttpResponse(response % question_id)
+
+    def vote(request, question_id):
+    return HttpResponse("You're voting on question %s." % question_id)
+    ```
+  - `vi polls/urls.py`
+    - error가 발생하고 파일이 열린다면, /home/[userName]/.vimrc 에 `set nomodeline`을 추가한다.
+    ```
+    from django.urls import path
+    from . import views
+
+    urlpatterns = [
+      # ex: /polls/
+      path('', views.index, name='index'),
+      # ex: /polls/5/
+      path('<int:question_id>/', views.detail, name='detail'),
+      # ex: /polls/5/results/
+      path('<int:question_id>/results/', views.results, name='results'),
+      # ex: /polls/5/vote/
+      path('<int:question_id>/vote/', views.vote, name='vote'),
+    ]
+    ```
+  - `vi polls/views.py`
+    ```
+    from django.http import HttpResponse
+    from .models import Question
+
+    def index(request):
+      latest_question_list = Question.objects.order_by('-pub_date')[:5]
+      output = ', '.join([q.question_text for q in latest_question_list])
+      return HttpResponse(output)
+
+    # (detail, results, vote)는 변경되지 않은 상태로 남깁니다.
+    ```
+  - `mkdir -p polls/templates/polls`
+  - `vi polls/templates/polls/index.html`
+    ```
+    {% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+        <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+    {% else %}
+    <p>No polls are available.</p>
+    {% endif %}
+    ```
+  - `vi polls/views.py`
+    ```
+    ## 마찬가지로 index 아래의 다른 함수들은 그대로 변경하지 않습니다.
+    from django.http import HttpResponse
+    from django.template import loader
+    from .models import Question
+
+    def index(request):
+      latest_question_list = Question.objects.order_by('-pub_date')[:5]
+      template = loader.get_template('polls/index.html')
+      context = {
+        'latest_question_list': latest_question_list,
+      }
+      return HttpResponse(template.render(context, request))
+    ```
 
 ## 함수 인수
 - path()
