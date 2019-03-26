@@ -120,7 +120,7 @@
     - ***>>>*** `current_year = timezone.now().year`
     - ***>>>*** `Question.objects.get(pub_date__year=current_year)`
     - ***>>>*** `Question.objects.get(id=2)`
-    - ***>>>*** `Question.objects.get(pk=1)`
+    - ***>>>*** `q = Question.objects.get(pk=1)`
     - ***>>>*** `q.was_published_recently()`
     - ***>>>*** `q = Question.objects.get(pk=1)`
     - ***>>>*** `q.choice_set.all()`
