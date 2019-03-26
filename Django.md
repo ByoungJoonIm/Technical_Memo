@@ -81,7 +81,7 @@
   - `python manage.py sqlmigrate polls 0001` : 0001 마이그레이션 파일의 SQL 문장을 분석
   - `python3 manage.py migrate` : 변경사항(0001_...)을 적용하여 데이터베이스의 스키마 동기화
 - 첫 번째 장고 앱 작성(part2-API 가지고 놀기)[[원문](https://docs.djangoproject.com/ko/2.1/intro/tutorial02/)]
-  - `python manage.py shell`
+  - `python3 manage.py shell`
     - ***>>>*** `from polls.models import Choice, Question`
     - ***>>>*** `Question.objects.all()`
     - ***>>>*** `from django.utils import timezone`
@@ -111,7 +111,7 @@
       def __str__(self):
         return self.choice_text
     ```
-  - `python manage.py shell`
+  - `python3 manage.py shell`
     - ***>>>*** `from polls.models import Choice, Question`
     - ***>>>*** `Question.objects.all()`
     - ***>>>*** `Question.objects.filter(id=1)`
