@@ -81,7 +81,58 @@
   - `python manage.py sqlmigrate polls 0001` : 0001 마이그레이션 파일의 SQL 문장을 분석
   - `python3 manage.py migrate` : 변경사항(0001_...)을 적용하여 데이터베이스의 스키마 동기화
 - 첫 번째 장고 앱 작성(part2-API 가지고 놀기)[[원문](https://docs.djangoproject.com/ko/2.1/intro/tutorial02/)]
-  - API를 탐색하는 방법으로 링크 참조. 이 글에선 다루지 않음
+  - `python manage.py shell`
+    - ***>>>*** `from polls.models import Choice, Question`
+    - ***>>>*** `Question.objects.all()`
+    - ***>>>*** `from django.utils import timezone`
+    - ***>>>*** `q = Question(question_text="What's new?", pub_date=timezone.now())`
+    - ***>>>*** `q.save()`
+    - ***>>>*** `q.id`
+    - ***>>>*** `q.question_text`
+    - ***>>>*** `q.pub_date`
+    - ***>>>*** `q.question_text = "What's up?"`
+    - ***>>>*** `q.save()`
+    - ***>>>*** `Question.objects.all()`
+  - `vi polls/models.py`
+    ```
+    import datetime
+    from django.db import models
+    from django.utils import timezone
+
+    class Question(models.Model):
+      # ...
+      def __str__(self):
+        return self.question_text
+      def was_published_recently(self):
+        return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
+
+    class Choice(models.Model):
+      # ...
+      def __str__(self):
+        return self.choice_text
+    ```
+  - `python manage.py shell`
+    - ***>>>*** `from polls.models import Choice, Question`
+    - ***>>>*** `Question.objects.all()`
+    - ***>>>*** `Question.objects.filter(id=1)`
+    - ***>>>*** `Question.objects.filter(question_text__startswith='What')`
+    - ***>>>*** `from django.utils import timezone`
+    - ***>>>*** `current_year = timezone.now().year`
+    - ***>>>*** `Question.objects.get(pub_date__year=current_year)`
+    - ***>>>*** `Question.objects.get(id=2)`
+    - ***>>>*** `Question.objects.get(pk=1)`
+    - ***>>>*** `q.was_published_recently()`
+    - ***>>>*** `q = Question.objects.get(pk=1)`
+    - ***>>>*** `q.choice_set.all()`
+    - ***>>>*** `q.choice_set.create(choice_text='Not much', votes=0)`
+    - ***>>>*** `q.choice_set.create(choice_text='The sky', votes=0)`
+    - ***>>>*** `c = q.choice_set.create(choice_text='Just hacking again', votes=0)`
+    - ***>>>*** `c.question`
+    - ***>>>*** `q.choice_set.all()`
+    - ***>>>*** `q.choice_set.count()`
+    - ***>>>*** `Choice.objects.filter(question__pub_date__year=current_year)`
+    - ***>>>*** `c = q.choice_set.filter(choice_text__startswith='Just hacking')`
+    - ***>>>*** `c.delete()`
 - 첫 번째 장고 앱 작성(part2-Django Admin 모듈 소개)[[원문](https://docs.djangoproject.com/ko/2.1/intro/tutorial02/)]
   - `python3 manage.py createsuperuser` : 관리 사이트에 로그인 할 수 있는 사용자 생성
     - username : 관리자 계정의 이름
@@ -169,6 +220,17 @@
         'latest_question_list': latest_question_list,
       }
       return HttpResponse(template.render(context, request))
+    ```
+  - `vi polls/views.py`
+    ```
+    ## 마찬가지로 index 아래의 다른 함수들은 그대로 변경하지 않습니다.
+    from django.shortcuts import render
+    from .models import Question
+
+    def index(request):
+      latest_question_list = Question.objects.order_by('-pub_date')[:5]
+      context = {'latest_question_list': latest_question_list}
+      return render(request, 'polls/index.html', context)
     ```
 
 ## 함수 인수
