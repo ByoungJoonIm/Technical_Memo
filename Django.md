@@ -232,7 +232,31 @@
       context = {'latest_question_list': latest_question_list}
       return render(request, 'polls/index.html', context)
     ```
-
+  - `vi polls/views.py`
+    ```
+    from django.shortcuts import get_object_or_404, render
+    ## 마찬가지로 다른 함수는 변경하지 않습니다.
+    from .models import Question
+    # ...
+    def detail(request, question_id):
+      question = get_object_or_404(Question, pk=question_id)
+      return render(request, 'polls/detail.html', {'question': question})
+    ```
+  - `vi polls/templates/polls/detail.html`
+    `<li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>` 문장을 다음과 같이 변경
+    ```
+    <li><a href="{% url 'detail' question.id %}">{{ question.question_text }}</a></li>
+    ```
+  - `vi polls/urls.py`    
+    `urlpatterns = [` 라인 윗줄에 추가
+    ```
+    app_name = 'polls'
+    ```
+  - `vi polls/templates/polls/index.html`
+    `<li><a href="{% url 'detail' question.id %}">{{ question.question_text }}</a></li>` 을 다음과 같이 변경
+    ```
+    <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+    ```
 ## 함수 인수
 - path()
   ```
