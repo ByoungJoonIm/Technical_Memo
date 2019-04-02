@@ -83,7 +83,8 @@
   태그 미지정시 image_name에 해당하는 모든 이미지 삭제
   ```
   
-# 
+# Docker-compose
+- 작성중...
   
 # nginx 빌드 및 실행 예제
 1. Dockerfile 작성
