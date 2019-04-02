@@ -83,6 +83,8 @@
   태그 미지정시 image_name에 해당하는 모든 이미지 삭제
   ```
   
+# 
+  
 # nginx 빌드 및 실행 예제
 1. Dockerfile 작성
   ```
@@ -125,4 +127,5 @@
 - /bin/bash 실행 파일에서 빠져나오면 해당 컨테이너는 정지된다
 
 # Reference
-- [Link](https://www.slideshare.net/pyrasis/docker-fordummies-44424016)
+- [docker](https://www.slideshare.net/pyrasis/docker-fordummies-44424016)
+- [docker_compose](http://raccoonyy.github.io/docker-usages-for-dev-environment-setup/)
