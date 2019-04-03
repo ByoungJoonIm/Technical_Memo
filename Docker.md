@@ -82,7 +82,10 @@
   docker rmi <image_name>:<tag>
   태그 미지정시 image_name에 해당하는 모든 이미지 삭제
   ```
-  
+- 정지된 컨테이너 모두 삭제
+  ```
+  sudo docker rm $(docker ps -a -q)
+  ```
 # Docker-compose
 - 작성중...
   
