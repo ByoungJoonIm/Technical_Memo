@@ -4,3 +4,4 @@
   sudo apt-get install putty-tools
   sudo puttygen ppkkey.ppk -O private-openssh -o pemkey.pem
   ```
+- [참고](https://aws.amazon.com/ko/premiumsupport/knowledge-center/convert-pem-file-into-ppk/)
