@@ -87,7 +87,8 @@
   sudo docker rm $(docker ps -a -q)
   ```
 # Docker-compose
-- 작성중...
+- 기본 파일()을 설정파일로 사용하여 실행
+  - `docker-compose up -d`
   
 # nginx 빌드 및 실행 예제
 1. Dockerfile 작성
