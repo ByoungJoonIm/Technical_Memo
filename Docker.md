@@ -86,6 +86,10 @@
   ```
   sudo docker rm $(docker ps -a -q)
   ```
+- <none> image 삭제
+  ```
+  docker rmi $(docker images -f "dangling=true" -q)
+  ```
 # Docker-compose
 - 기본 파일()을 설정파일로 사용하여 실행
   - `docker-compose up -d`
