@@ -102,6 +102,11 @@
   ```
   docker rmi $(docker images -f "dangling=true" -q)
   ```
+- DCT(Docker Content Trust) 활성화 / 비활성화 : 이미지가 변조되었는지를 체크하고 pull 하는 기능
+  ```
+  export DOCKER_CONTENT_TRUST=1                   활성화
+  export DOCKER_CONTENT_TRUST=0                   비활성화
+  ```
 # Docker-compose
 - 기본 파일()을 설정파일로 사용하여 실행
   - `docker-compose up -d`
