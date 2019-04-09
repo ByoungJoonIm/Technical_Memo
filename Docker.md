@@ -8,6 +8,18 @@
   sudo usermod -aG docker $USER
   sudo service docker restart
   ```
+- 도커 버전 확인
+  ```
+  docker version
+  ```
+- 실행 환경 확인
+  ```
+  docker system info
+  ```
+- 디스크 이용 상황
+  ```
+  docker system df
+  ```
 - 이미지 검색
   ```
   sudo docker search ubuntu
