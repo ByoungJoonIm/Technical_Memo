@@ -111,6 +111,14 @@
   ```
   docker login -u username -p passwd
   ```
+- Docker hub에 이미지 업로드
+  ```
+  docker image push image_name:tag
+  ```
+- Docker hub에서 로그아웃
+  ```
+  docker logout
+  ```
 # Docker-compose
 - 기본 파일()을 설정파일로 사용하여 실행
   - `docker-compose up -d`
