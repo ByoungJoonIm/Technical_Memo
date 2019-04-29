@@ -165,7 +165,6 @@
 
 # Rules
 - /bin/bash 실행 파일에서 빠져나오면 해당 컨테이너는 정지된다
-- 처음으로 이미지를 run 한뒤 `apt-get`을 사용하려면, `apt-get update` 를 먼저 실행해 주어야 한다.
 
 # Trouble Shooting
 - 다음과 같은 에러 발생
@@ -175,6 +174,9 @@
   ```
   - 네트워크 충돌 문제로, `docker ps -a` 한 뒤 모든 사용하지 않는 컨테이너 삭제
   - [참고](https://github.com/maxking/docker-mailman/issues/85)
+
+- `apt-get`이 작동하지 않음
+  - 처음으로 이미지를 run 한뒤 `apt-get`을 사용하려면, `apt-get update` 를 먼저 실행해 주어야 함
 
 # Reference
 - [docker](https://www.slideshare.net/pyrasis/docker-fordummies-44424016)
