@@ -165,6 +165,7 @@
 
 # 규칙
 - /bin/bash 실행 파일에서 빠져나오면 해당 컨테이너는 정지된다
+- 처음으로 이미지를 run 한뒤 `apt-get`을 사용하려면, `apt-get update` 를 먼저 실행해 주어야 한다.
 
 # Reference
 - [docker](https://www.slideshare.net/pyrasis/docker-fordummies-44424016)
