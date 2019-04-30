@@ -177,6 +177,13 @@
 
 - `apt-get`이 작동하지 않음
   - 처음으로 이미지를 run 한뒤 `apt-get`을 사용하려면, `apt-get update` 를 먼저 실행해 주어야 함
+  
+- ` Error starting userland proxy: listen tcp 0.0.0.0:80: bind: address already in use` 에러가 발생
+  - 이미 사용되고 있는 포트일 가능성이 있음
+  - 다음과 같은 명령을 통해 사용되고 있는 80번 포트 검색
+    - `sudo lsof -i -P -n | grep LISTEN`
+  - nginx가 사용하고 있는 경우, nginx 서비스 종료
+    - `sudo service nginx stop`
 
 # Reference
 - [docker](https://www.slideshare.net/pyrasis/docker-fordummies-44424016)
