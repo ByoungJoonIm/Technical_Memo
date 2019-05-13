@@ -21,8 +21,8 @@ from django.conf.urls import url, include
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^bookmark/', include('bookmark.urls', namespace='bookmark')),
-    url(r'^blog/', include('blog.urls', namespace='blog')),
+    url(r'^bookmark/', include(('bookmark.urls', 'bookmark'), namespace='bookmark')),
+    url(r'^blog/', include(('blog.urls', 'blog'), namespace='blog')),
 
     #url(r'^bookmark/$', BookmarkLV.as_view(), name='index'),
     #url(r'^bookmark/(?P<pk>\d+)/$', BookmarkDV.as_view(), name='detail'),
