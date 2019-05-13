@@ -1,7 +1,0 @@
-Performing system checks...
-
-System check identified no issues (0 silenced).
-May 13, 2019 - 16:12:44
-Django version 2.2.1, using settings 'mysite.settings'
-Starting development server at http://localhost:8000/
-Quit the server with CONTROL-C.
