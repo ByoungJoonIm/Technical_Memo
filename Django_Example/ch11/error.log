@@ -1,0 +1,19 @@
+Watching for file changes with StatReloader
+  File "manage.py", line 16
+    ) from exc
+         ^
+SyntaxError: invalid syntax
+Watching for file changes with StatReloader
+[14/May/2019 10:33:11] "POST /accounts/register/ HTTP/1.1" 200 2149
+[14/May/2019 10:33:11] "GET /static/css/base.css HTTP/1.1" 304 0
+[14/May/2019 10:33:11] "GET /static/css/forms.css HTTP/1.1" 304 0
+[14/May/2019 10:33:14] "POST /accounts/register/ HTTP/1.1" 200 2149
+[14/May/2019 10:33:24] "POST /accounts/register/ HTTP/1.1" 200 2148
+[14/May/2019 10:33:30] "POST /accounts/register/ HTTP/1.1" 302 0
+[14/May/2019 10:33:30] "GET /accounts/register/done/ HTTP/1.1" 200 1250
+[14/May/2019 10:33:36] "GET /accounts/login/ HTTP/1.1" 200 1917
+[14/May/2019 10:34:08] "GET /accounts/login/ HTTP/1.1" 200 1917
+[14/May/2019 10:34:17] "POST /accounts/login/ HTTP/1.1" 302 0
+[14/May/2019 10:34:17] "GET / HTTP/1.1" 200 2227
+[14/May/2019 10:34:17] "GET /static/css/home.css HTTP/1.1" 304 0
+[14/May/2019 10:34:17] "GET /static/img/django-actor-big.jpg HTTP/1.1" 404 1696
