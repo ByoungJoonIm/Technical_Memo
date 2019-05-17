@@ -1,0 +1,81 @@
+Watching for file changes with StatReloader
+  File "manage.py", line 16
+    ) from exc
+         ^
+SyntaxError: invalid syntax
+Watching for file changes with StatReloader
+[14/May/2019 10:33:11] "POST /accounts/register/ HTTP/1.1" 200 2149
+[14/May/2019 10:33:11] "GET /static/css/base.css HTTP/1.1" 304 0
+[14/May/2019 10:33:11] "GET /static/css/forms.css HTTP/1.1" 304 0
+[14/May/2019 10:33:14] "POST /accounts/register/ HTTP/1.1" 200 2149
+[14/May/2019 10:33:24] "POST /accounts/register/ HTTP/1.1" 200 2148
+[14/May/2019 10:33:30] "POST /accounts/register/ HTTP/1.1" 302 0
+[14/May/2019 10:33:30] "GET /accounts/register/done/ HTTP/1.1" 200 1250
+[14/May/2019 10:33:36] "GET /accounts/login/ HTTP/1.1" 200 1917
+[14/May/2019 10:34:08] "GET /accounts/login/ HTTP/1.1" 200 1917
+[14/May/2019 10:34:17] "POST /accounts/login/ HTTP/1.1" 302 0
+[14/May/2019 10:34:17] "GET / HTTP/1.1" 200 2227
+[14/May/2019 10:34:17] "GET /static/css/home.css HTTP/1.1" 304 0
+[14/May/2019 10:34:17] "GET /static/img/django-actor-big.jpg HTTP/1.1" 404 1696
+Watching for file changes with StatReloader
+[16/May/2019 17:50:07] "GET /accounts/logout/ HTTP/1.1" 200 1312
+[16/May/2019 17:50:07] "GET /static/css/base.css HTTP/1.1" 304 0
+[16/May/2019 17:50:09] "GET /accounts/login/ HTTP/1.1" 200 1967
+[16/May/2019 17:50:17] "POST /accounts/login/ HTTP/1.1" 200 2051
+[16/May/2019 17:50:26] "POST /accounts/login/ HTTP/1.1" 200 2051
+[16/May/2019 17:50:35] "POST /accounts/login/ HTTP/1.1" 302 0
+[16/May/2019 17:50:35] "GET / HTTP/1.1" 200 2278
+[16/May/2019 17:50:36] "GET /static/img/django-actor-big.jpg HTTP/1.1" 404 1696
+[16/May/2019 17:50:37] "GET /bookmark/ HTTP/1.1" 200 1411
+[16/May/2019 17:50:37] "GET /static/css/base.css HTTP/1.1" 304 0
+[16/May/2019 17:50:39] "GET /bookmark/add/ HTTP/1.1" 200 1956
+[16/May/2019 17:50:57] "POST /bookmark/add/ HTTP/1.1" 302 0
+[16/May/2019 17:50:57] "GET /bookmark/ HTTP/1.1" 200 1465
+Internal Server Error: /bookmark/change/
+Traceback (most recent call last):
+  File "/home/django/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/django/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/django/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 143, in _get_response
+    response = response.render()
+  File "/home/django/.local/lib/python3.6/site-packages/django/template/response.py", line 106, in render
+    self.content = self.rendered_content
+  File "/home/django/.local/lib/python3.6/site-packages/django/template/response.py", line 83, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/django/.local/lib/python3.6/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/django/.local/lib/python3.6/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/django/.local/lib/python3.6/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/django/.local/lib/python3.6/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/django/.local/lib/python3.6/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/django/.local/lib/python3.6/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/django/.local/lib/python3.6/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/django/.local/lib/python3.6/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/django/.local/lib/python3.6/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/django/.local/lib/python3.6/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/django/.local/lib/python3.6/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/django/.local/lib/python3.6/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/django/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/django/.local/lib/python3.6/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/django/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/django/.local/lib/python3.6/site-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/django/.local/lib/python3.6/site-packages/django/urls/resolvers.py", line 668, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'delete' not found. 'delete' is not a valid view function or pattern name.
+[16/May/2019 17:51:00] "GET /bookmark/change/ HTTP/1.1" 500 161249
