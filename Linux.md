@@ -11,3 +11,5 @@
   - ansi 스타일의 출력을 사용했기 때문으로, 글씨에 색을 넣기 위한 기호임
   - ansi 관련 on, off 기능이 있는 경우 off로 하면 이와같은 문제가 발생하지 않음
   - [참고](https://stackoverflow.com/questions/23225064/how-to-avoid-special-characters-when-redirecting-output-in-bash-scripts)
+- 특정 파일 내용 찾기
+  - `grep -iRl "your-text-to-find" ./`
