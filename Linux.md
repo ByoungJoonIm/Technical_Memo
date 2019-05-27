@@ -13,3 +13,11 @@
   - [참고](https://stackoverflow.com/questions/23225064/how-to-avoid-special-characters-when-redirecting-output-in-bash-scripts)
 - 특정 파일 내용 찾기
   - `grep -iRl "your-text-to-find" ./`
+- SCP
+  - `scp -P 10022 src_file_name user_name@host_name:/home/usr_name/dst_file_name`
+  ```
+  scp : 리눅스간 파일 전송
+  -P 10022 : 수신측의 포트는 10022를 사용(일반적으로 22번을 사용하며, 이는 default이다.)
+  schema.sql : 보낼 파일(현재 명령어를 실행하는 PC의 위치)
+  user_name@host_name:/home/usr_name/schema.sql : 받을 파일(파일을 수신받을 PC)
+  ```
