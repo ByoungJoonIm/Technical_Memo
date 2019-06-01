@@ -21,3 +21,12 @@
   schema.sql : 보낼 파일(현재 명령어를 실행하는 PC의 위치)
   user_name@host_name:/home/usr_name/schema.sql : 받을 파일(파일을 수신받을 PC)
   ```
+- SHA256
+  ```
+  echo -n "foobar" | shasum -a 256
+  ```
+- substring
+  ```
+  cmd=`echo -n "foobar" | shasum -a 256`
+  echo ${cmd:0:64}
+  ```
