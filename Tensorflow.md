@@ -60,4 +60,12 @@ curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.li
   ![image](https://github.com/BJ-Lim/Frameworks/blob/master/Captures/docker_tf_gpu_version_error.JPG)
   - 이 문제는 버전의 문제입니다.
   - CUDA, Tensorflow, 그래픽 드라이버 간의 버전이 호환되어야 하는데, 그중에서 문제가 발생한 것입니다.
-  - 가장 쉬운 방법은 Tensorflow의 버전을 바꾸는 방법입니다.
+  - 가장 쉬운 방법은 Tensorflow의 버전을 바꾸는 방법입니다. 다음 표를 참고하여 필요한 Tensorflow 버전을 확인합니다.
+  - ![image](https://i.stack.imgur.com/RQ1uf.png)
+  - [이 사이트](https://www.tensorflow.org/install/docker)에서 Docker의 태그를 붙여 다운받는 방법을 확인합니다.
+    - 이 방법으로 다운이 불가능한 경우 [이 사이트](https://hub.docker.com/r/tensorflow/tensorflow/tags)에서 직접 태그를 찾아 이미지를 다운로드 합니다.
+  - 이미지 다운로드 방법은 다음과 같습니다.
+    - `docker pull tensorflow/tensorflow:version-gpu-jupyter`
+      - version : latest, 1.10.0 ... 등의 형식으로 존재합니다.
+      - gpu : 우리는 GPU 버전을 깔 것이므로 이 문구는 대부분 들어갑니다.
+      - jupyter : 최신 버전에만 있습니다. 하지만 옛날 버전에서 gpu 버전을 깔면, jupyter notebook이 포함되어 있습니다.(1.12.0 버전 기준)
