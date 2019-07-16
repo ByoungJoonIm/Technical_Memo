@@ -1,4 +1,4 @@
-# Ubuntu 16.04 GPU 사용
+# Ubuntu 16.04 GPU
 ## 설치 순서
 
 - docker 설치 
@@ -24,7 +24,7 @@
 - 재부팅
 - nvidia-smi 명령어로 설치 확인
 
-- 1.0 설치시 제거 과정
+- 이미 설치된 1.0 버전 제거 과정(설치를 안했어도 그냥 실행 추천)
   - `docker volume ls -q -f driver=nvidia-docker | xargs -r -I{} -n1 docker ps -q -a -f volume={} | xargs -r docker rm -f`
   - `sudo apt-get purge -y nvidia-docker`
 
@@ -54,3 +54,10 @@ curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.li
 - 해당 PC의 브라우저에서 다음 주소로 접속
   - `http://localhost:8888`
 - 비밀번호로 위에서 검색한 토큰의 값 입력
+
+## Trouble Shooting
+- 다음과 같이 출력되는 경우
+  ![image](https://github.com/BJ-Lim/Frameworks/blob/master/Captures/docker_tf_gpu_version_error.JPG)
+  - 이 문제는 버전의 문제입니다.
+  - CUDA, Tensorflow, 그래픽 드라이버 간의 버전이 호환되어야 하는데, 그중에서 문제가 발생한 것입니다.
+  - 가장 쉬운 방법은 Tensorflow의 버전을 바꾸는 방법입니다.
