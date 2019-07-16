@@ -47,13 +47,13 @@ curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.li
   
 - 본인의 드라이버 및 CUDA 버전에 맞는 tensorflow gpu 이미지 다운로드
   - `docker pull tensorflow/tensorflow:1.12.0-gpu`
-    - (주의!) 사람마다 다른 버전의 tensorflow를 깔아야 할 수 있으며, gpu버전과 jupyter버전이 나누어져 있는 경우가 있습니다.
+    - (주의!) 그래픽 카드의 드라이버 버전에 따라서 다른 버전의 tensorflow를 깔아야 할 수 있으며, gpu버전과 jupyter버전이 각각 다른 이미지로 제공되는 경우도 있습니다.
 - 실행
   - `docker run -it -d --runtime=nvidia --name tf -p 8888:8888 -v /home/genz/jupyter_notebook:/notebooks tensorflow/tensorflow:1.12.0-gpu jupyter notebook --allow-root`
-  - `docker logs tf | grep token`
 - 해당 PC의 브라우저에서 다음 주소로 접속
   - `http://localhost:8888`
-- 비밀번호로 위에서 검색한 토큰의 값 입력
+- 다음 명령으로 토큰 값을 확인한 뒤, jupyter notebook의 비밀번호로 입력
+  - `docker logs tf | grep token`
 
 ## Trouble Shooting
 - 다음과 같이 출력되는 경우
