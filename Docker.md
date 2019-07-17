@@ -94,6 +94,13 @@
   docker rmi <image_name>:<tag>
   태그 미지정시 image_name에 해당하는 모든 이미지 삭제
   ```
+- 컨테이너의 현재 상태를 이미지로 만들기
+  ```
+  sudo docker commit tf tf/tf_keras
+  ```
+  ```
+  docker commit [container_name] [image_name:tag_name]
+  ```
 - 정지된 컨테이너 모두 삭제
   ```
   sudo docker rm $(docker ps -a -q)
