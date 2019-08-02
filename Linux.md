@@ -30,3 +30,15 @@
   cmd=`echo -n "foobar" | shasum -a 256`
   echo ${cmd:0:64}
   ```
+  
+## Grub
+- 리눅스의 기본 boot 매니저이다.
+- grub가 깔려있는 경우 기본적으로 10초동안 사용자가 운영체제를 선택하도록 기다리는데, 이는 서버로 사용하기에 적합하지 않다.
+- 시작시 timeout을 0으로 주려면 다음과 같이 하면된다.
+  - grub 설정 파일 변경
+    - `sudo vi /etc/default/grub`
+    - `GRUB_TIMEOUT=10` 을 `GRUB_TIMEOUT=0.0`으로 변경후 저장
+  - grub 설정 파일 변경사항 적용
+    - `sudo update-grub`
+  - 재시작
+    - `sudo reboot`
