@@ -21,7 +21,6 @@
   - `sudo add-apt-repository ppa:graphics-drivers/ppa`
 - apt 저장소 최신화
   - `sudo apt-get update`
-sudo reboot
 - 드라이버 설치
   - `sudo ubuntu-drivers autoinstall`
 
