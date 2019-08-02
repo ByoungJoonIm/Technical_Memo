@@ -22,7 +22,8 @@
   - `sudo ubuntu-drivers autoinstall`
 
 - 재부팅
-- nvidia-smi 명령어로 설치 확인
+- 설치 확인
+  - `nvidia-smi`
 
 - 이미 설치된 1.0 버전 제거 과정(설치를 안했어도 그냥 실행 추천)
   - `docker volume ls -q -f driver=nvidia-docker | xargs -r -I{} -n1 docker ps -q -a -f volume={} | xargs -r docker rm -f`
