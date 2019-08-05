@@ -33,7 +33,7 @@
 - vi 에디터 주석 색 바꾸기
   - `vi ~/.vimrc`
   - `colorscheme desert` 입력 후 저장
-- 환경변수 편집 및 적용(전체 쉘)
+- 환경변수 편집 및 영구 적용(전체 쉘)
   - `vi ~/.bashrc`
   - 맨 밑줄에 `PATH=$PATH:target_path` 추가 후 저장
     - target_path : 추가할 path
