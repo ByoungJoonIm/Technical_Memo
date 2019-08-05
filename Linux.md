@@ -30,6 +30,9 @@
   cmd=`echo -n "foobar" | shasum -a 256`
   echo ${cmd:0:64}
   ```
+- vi 에디터 주석 색 바꾸기
+  - `vi ~/.vimrc`
+  - `colorscheme desert` 입력 후 저장
   
 ## Grub
 - 리눅스의 기본 boot 매니저이다.
