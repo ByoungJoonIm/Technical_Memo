@@ -42,3 +42,38 @@
     - `sudo update-grub`
   - 재시작
     - `sudo reboot`
+    
+## 압축 및 해제
+- 리눅스는 다양한 압축 및 해제 패키지를 제공한다.
+- 압축 및 해제는 다음과 같이 하면 된다.
+  - tar 압축
+    - `tar -cvf [target.tar] [dir_name]`
+      - target.tar : 압축될 파일명
+      - dir_name : 압축할 디렉토리명
+  - tar 압축 해제
+    - `tar -xvf [target.tar]`
+      - target.tar : 압축 해제할 파일명
+  - tar.gz로 압축
+    - `tar -zcvf [target.tar.gz] [dir_name]`
+      - target.tar : 압축될 파일명
+      - dir_name : 압축할 디렉토리명
+  - tar.gz 압축 해제
+    - `tar -zxvf [target.tar.gz]`
+      - target.tar.gz : 압축 해제할 파일명
+- 옵션은 다음과 같다.
+
+  옵션 | 설명
+  ---- | ----
+  -c | 파일을 tar로 묶기
+  -p | 파일 권한을 저장
+  -v | 묶거나 파일을 풀 때 과정을 화면으로 출력
+  -f | 파일 이름을 지정
+  -C | 경로를 지정
+  -x | tar 압축 풀기
+  -z | gzip으로 압축하거나 해제
+
+
+
+
+## reference
+- [압축 및 해제](https://nota.tistory.com/53)
