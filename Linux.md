@@ -33,6 +33,11 @@
 - vi 에디터 주석 색 바꾸기
   - `vi ~/.vimrc`
   - `colorscheme desert` 입력 후 저장
+- 환경변수 편집 및 적용(전체 쉘)
+  - `vi ~/.bashrc`
+  - 맨 밑줄에 `PATH=$PATH:target_path` 추가 후 저장
+    - target_path : 추가할 path
+  - `source ~/.bashrc` 명령으로 환경변수 적용
   
 ## Grub
 - 리눅스의 기본 boot 매니저이다.
