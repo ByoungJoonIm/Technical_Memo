@@ -38,6 +38,18 @@
   - 맨 밑줄에 `PATH=$PATH:target_path` 추가 후 저장
     - target_path : 추가할 path
   - `source ~/.bashrc` 명령으로 환경변수 적용
+
+
+## bash shell
+- 파라미터가 있는지 체크하는 구문
+  ```
+  if [ $# -eq 0 ]
+  then
+    echo "usage : ./script.sh [param1]"
+    exit
+  fi
+  #do something
+  ```
   
 ## Grub
 - 리눅스의 기본 boot 매니저이다.
