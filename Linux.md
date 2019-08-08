@@ -38,6 +38,14 @@
   - 맨 밑줄에 `PATH=$PATH:target_path` 추가 후 저장
     - target_path : 추가할 path
   - `source ~/.bashrc` 명령으로 환경변수 적용
+- 특정 크기의 의미없는 파일 생성
+  - `dd if=/dev/zero of=temp bs=1G count=16`
+    - if : 복사할 파일(src)
+    - of : 복사될 파일(dest)
+    - bs : 블록 사이즈
+      - 최대 2GB 인듯. 특정 시스템에서만 그럴 수 있음
+    - count : 블록을 반복할 횟수
+    - 생성되는 파일 사이즈 = bs * count
 
 
 ## bash shell
