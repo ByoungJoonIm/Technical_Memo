@@ -105,3 +105,4 @@
 
 ## reference
 - [압축 및 해제](https://nota.tistory.com/53)
+- [swap 관리](https://htst.tistory.com/32)
