@@ -126,6 +126,14 @@
   ```
   docker logout
   ```
+- Docker image 및 container를 tar파일로 추출
+  ```
+  docker export -o tar_file_name target_container
+  ```
+- Docker image 및 container를 tar파일로부터 가져오기
+  ```
+  docker import tar_file_name
+  ```
 # Docker-compose
 - 기본 파일()을 설정파일로 사용하여 실행
   - `docker-compose up -d`
