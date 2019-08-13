@@ -105,8 +105,27 @@
   -x | tar 압축 풀기
   -z | gzip으로 압축하거나 해제
 
-
-
+## Swap 관리
+- swap file 추가
+  - 큰 파일 생성
+    - `fallocate -l 2GB swap_temp`
+    - 파일 권한 변경
+      - `chmod 600 swap_temp`
+    - 파일 소유주 및 그룹 변경
+      - `sudo chown root:root swap_temp`
+  - 스왑 파일 시스템 생성
+    - `sudo mkswap swap_temp`
+  - 활성화
+    - `sudo swapon swap_temp`
+  - 부팅시에 스왑 마운트
+    - `sudo vi /etc/fstab`
+- swap file 제거
+  - 부팅시에 스왑 마운트 취소
+    - `sudo vi /etc/fstab`
+  - 비활성화
+    - `sudo swapoff swap_temp`
+  - 스왑 파일 삭제
+    - `sudo rm swap_temp`
 
 ## reference
 - [압축 및 해제](https://nota.tistory.com/53)
