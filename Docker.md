@@ -134,6 +134,10 @@
   ```
   docker import tar_file_name
   ```
+- host 장치를 container 장치에 매핑하기
+  ```
+  docker run ... --device="/dev/sda1:/dev/sda1"
+  ```
 # Docker-compose
 - 기본 파일()을 설정파일로 사용하여 실행
   - `docker-compose up -d`
