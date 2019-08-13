@@ -117,6 +117,7 @@
     - `sudo mkswap swap_temp`
   - 활성화
     - `sudo swapon swap_temp`
+      - -p 우선순위 : 해당 스왑 파일의 우선순위를 설정
   - 부팅시에 스왑 마운트
     - `sudo vi /etc/fstab`
 - swap file 제거
