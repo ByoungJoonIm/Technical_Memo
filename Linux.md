@@ -51,7 +51,13 @@
     - `fallocate -l 2GB swap_tmp`
       - 2GB : 용량 지정
       - swap_tmp : 파일명 지정
-
+- 터미널에 메시지 보내기
+  - broadcast
+    - `wall [message]`
+    - `wall` 입력 후 여러 라인 입력 -> `ctrl+d`로 보내기
+  - unicast
+    - `w` or `who`로 메시지 대상자에 해당하는 tty 찾기
+    - `echo "message" > /dev/pts/1`
 
 ## bash shell
 - 파라미터가 있는지 체크하는 구문
