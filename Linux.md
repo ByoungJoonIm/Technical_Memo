@@ -134,6 +134,29 @@
   - 스왑 파일 삭제
     - `sudo rm swap_temp`
 
+## Network
+- 고정 IP 설정
+  - `ifconfig` 명령어로 랜카드 이름 확인
+  - `vi /etc/network/interfaces`
+    - 다음과 같이 입력
+    ```
+    auto lo
+    iface lo inet loopback
+
+    auto enp3s0
+    iface enp3s0 inet static
+    address 192.0.0.2
+    netmask 255.255.255.0
+    gateway 192.0.0.1
+    dns-nameservers 192.0.0.3 192.0.0.4
+    ```
+      - enp3s0 : `ifconfig`시 확인한 랜카드 명
+      - 라인 4~9가 enp3s0에 대한 고정 IP를 설정하는 부분
+  - 서비스 재시작
+    - `sudo service networking restart`
+    - 위 명령어로 서비스가 재시작 가능하지만, 방화벽등의 이유로 재부팅 권장
+  
+
 ## reference
 - [압축 및 해제](https://nota.tistory.com/53)
 - [swap 관리](https://htst.tistory.com/32)
