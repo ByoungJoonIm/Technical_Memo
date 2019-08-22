@@ -1,7 +1,7 @@
-# 버전 확인
+## 버전 확인
 - `/etc/redhat-release`
 
-# shell
+## shell
 - vim 에디터 다운
   - `yum -y install vim-enhanced`
 - vim 에디터를 vi 명령어로 사용 가능하게 하기
