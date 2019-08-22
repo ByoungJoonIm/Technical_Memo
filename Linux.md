@@ -30,9 +30,13 @@
   cmd=`echo -n "foobar" | shasum -a 256`
   echo ${cmd:0:64}
   ```
-- vi 에디터 주석 색 바꾸기
-  - `vi ~/.vimrc`
-  - `colorscheme desert` 입력 후 저장
+- vi 에디터 기본 설정 변경
+  - `vi ~/.vimrc`(유저별 개별 적용) 혹은 `vi /etc/vimrc`의 가장 아랫부분에 추가(전체 적용)
+    ```
+    colorscheme desert  # style 변경, 보통 주석 색이 잘 안보여서 사용
+    set autoindent      # 자동 들여쓰기
+    syntax on           # 언어에서 식별자 색 입히기
+    ``` 
 - 환경변수 편집 및 영구 적용(전체 쉘)
   - `vi ~/.bashrc`
   - 맨 밑줄에 `PATH=$PATH:target_path` 추가 후 저장
