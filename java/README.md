@@ -22,7 +22,17 @@
   HashMap<String, Integer> hm = new HashMap<String, Integer>();
   
   hm.put("abc", 10);
-	if(hm.containsKey("abc"))
-		hm.put("abc", hm.get("abc") + 1);
-	System.out.println(hm.get("abc"));      //11
+  if(hm.containsKey("abc"))
+  	hm.put("abc", hm.get("abc") + 1);
+  System.out.println(hm.get("abc"));      //11
+  ```
+- 2차원 배열 이상에서 인덱스 사용하기
+  ```java
+  int arr[][] = new int[10][2];
+  for (int i = 0; i < arr.length; i++) {
+  	for (int j = 0; j < arr[0].length; j++) {
+  		arr[i][j] = 1;
+  		System.out.println(i + "," + j + " : " + arr[i][j]);
+  	}
+  }
   ```
