@@ -15,3 +15,14 @@
   String str = "ABABAB";
   str = str.replace("AB", "C");   // rs : CCC
   ```
+- Key, Value를 가지는 HashMap
+  ```java
+  import java.util.HashMap;
+
+  HashMap<String, Integer> hm = new HashMap<String, Integer>();
+  
+  hm.put("abc", 10);
+	if(hm.containsKey("abc"))
+		hm.put("abc", hm.get("abc") + 1);
+	System.out.println(hm.get("abc"));      //11
+  ```
