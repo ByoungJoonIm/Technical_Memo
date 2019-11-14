@@ -10,3 +10,8 @@
   ```java
   str = str.toLowerCase();
   ```
+- 문자열 내에 특정 문자열을 다른 문자열로 치환
+  ```java
+  String str = "ABABAB";
+  str = str.replace("AB", "C");   // rs : CCC
+  ```
