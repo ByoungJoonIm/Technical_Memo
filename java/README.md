@@ -36,3 +36,9 @@
   	}
   }
   ```
+- ArrayList의 배열 선언
+  ```
+  ArrayList<Integer> ali[] = new ArrayList[10];
+  ali[0] = new Arraylist<Integer>();
+  ali[0].add(10);
+  ```
