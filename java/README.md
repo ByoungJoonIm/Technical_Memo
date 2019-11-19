@@ -42,3 +42,11 @@
   ali[0] = new Arraylist<Integer>();
   ali[0].add(10);
   ```
+- HashMap의 iterator
+  ```java
+  HashMap<Integer, Integer> hs = new HashSet<Integer, Integer>();
+  hs.put(1, 3);
+  Iterator it = hs.keySet().iteraotr();
+  while(it.hasNext)
+    int key = it.next();
+  ```
