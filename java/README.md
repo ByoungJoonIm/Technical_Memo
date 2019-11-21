@@ -50,3 +50,8 @@
   while(it.hasNext)
     int key = it.next();
   ```
+
+- 특정 값으로 배열 채우기
+  ```java
+  Arrays.fill(arr, INF);
+  ```
