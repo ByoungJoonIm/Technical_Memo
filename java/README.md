@@ -55,3 +55,8 @@
   ```java
   Arrays.fill(arr, INF);
   ```
+- 컬렉션을 배열로 변환
+  ```java
+  ArrayList<Integer> al = new ArrayList<Integer>();
+  int arr[] = Collections.toArray(al);
+  ```
