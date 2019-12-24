@@ -5,6 +5,8 @@
   - $ `sudo reboot`
   - `장치` - `게스트 확장 CD 이미지 삽입` 후 명령어가 모두 실행될때 까지 기다림
   - $ `sudo reboot`
+- vim 에디터 설치
+  - $ `apt install vim`
 - python & pip 설치
   - $ `sudo apt install python3 python3-pip`
   
