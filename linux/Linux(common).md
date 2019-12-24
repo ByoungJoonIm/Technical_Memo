@@ -62,8 +62,10 @@
   - unicast
     - `w` or `who`로 메시지 대상자에 해당하는 tty 찾기
     - `echo "message" > /dev/pts/1`
+- 특정 사용자의 권한으로 실행(현재 루트일 때)
+  - $ `su -c '명령어' '사용자명'`
 
-## bash shell
+## bash shell 문법
 - 파라미터가 있는지 체크하는 구문
   ```
   if [ $# -eq 0 ]
