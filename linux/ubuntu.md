@@ -9,4 +9,14 @@
   - $ `apt install vim`
 - python & pip 설치
   - $ `sudo apt install python3 python3-pip`
-  
+  - 설치한 python3와 pip3를 기본으로 설정
+    - $ `sudo vi /etc/bash.bashrc`
+    - 가장 하단에 다음 2줄을 추가
+      ```
+      alias python=python3
+      alias pip=pip3
+      ```
+    - $ `source /etc/bash.bashrc`
+    - $ `python --version` 으로 적용 확인
+    
+    
