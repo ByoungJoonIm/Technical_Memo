@@ -7,9 +7,19 @@
   - $ `sudo reboot`
 - vim 에디터 설치 및 기본 설정
   - $ `apt install vim`
-  - $ `vi ~/.vimrc`를 한 뒤 다음과 같은 설정 추가
+  - $ `vi ~/.vimrc`를 한 뒤 다음과 같은 설정 추가(파이썬 기준 문법)
     ```
     colorscheme desert
+    syntax on
+    set smartindent
+    set autoindent
+    set cindent
+    set ts=4
+    set softtabstop=4
+    set expandtab
+    filetype indent plugin on
+    let python_version_3 = 1
+    let python_highlight_all = 1
     ```
 - python & pip 설치
   - $ `sudo apt install python3 python3-pip`
