@@ -10,3 +10,4 @@
 - [java](https://github.com/ByoungJoonIm/Frameworks/blob/master/java/README.md)
 ## Linux
 - [리눅스 공통](https://github.com/ByoungJoonIm/Frameworks/blob/master/linux/Linux(common).md)
+- [Ubuntu](https://github.com/ByoungJoonIm/Frameworks/blob/master/linux/ubuntu.md)
