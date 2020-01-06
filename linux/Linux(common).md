@@ -64,8 +64,12 @@
     - `echo "message" > /dev/pts/1`
 - 특정 사용자의 권한으로 실행(현재 루트일 때)
   - $ `su -c '명령어' '사용자명'`
+
+## apt
 - 깔려있는 apt 패키지 리스트 확인
   - $ `dpkg -l`
+- openjdk 설치
+  - $ `apt install openjdk-8-jdk`
 
 ## bash shell 문법
 - 파라미터가 있는지 체크하는 구문
@@ -76,7 +80,7 @@
     exit
   fi
   #do something
-  ```
+  ```  
   
 ## Grub
 - 리눅스의 기본 boot 매니저이다.
