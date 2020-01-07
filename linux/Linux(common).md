@@ -1,11 +1,3 @@
-## SSH Key
-- window의 putty는 .ppk를 사용하지만, 리눅스는 .pem 방식을 사용한다. 따라서 키를 옮겨서 사용하려면 변환이 필요하다.
-  ```
-  sudo apt-get install putty-tools
-  sudo puttygen ppkkey.ppk -O private-openssh -o pemkey.pem
-  ```
-- [참고](https://aws.amazon.com/ko/premiumsupport/knowledge-center/convert-pem-file-into-ppk/)
-
 ## bash
 - 출력을 redirection 했을 때, `[^` 문자가 보이는 경우
   - ansi 스타일의 출력을 사용했기 때문으로, 글씨에 색을 넣기 위한 기호임
@@ -64,6 +56,17 @@
     - `echo "message" > /dev/pts/1`
 - 특정 사용자의 권한으로 실행(현재 루트일 때)
   - $ `su -c '명령어' '사용자명'`
+
+## SSH
+### Key
+- window의 putty는 .ppk를 사용하지만, 리눅스는 .pem 방식을 사용한다. 따라서 키를 옮겨서 사용하려면 변환이 필요하다.
+  ```
+  sudo apt-get install putty-tools
+  sudo puttygen ppkkey.ppk -O private-openssh -o pemkey.pem
+  ```
+- [참고](https://aws.amazon.com/ko/premiumsupport/knowledge-center/convert-pem-file-into-ppk/)
+### 일반 접속
+- $ `ssh user@hostName`
 
 ## User 관리
 - User 삭제
