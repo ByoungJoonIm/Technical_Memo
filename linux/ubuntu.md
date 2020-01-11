@@ -33,3 +33,6 @@
     - $ `source /etc/bash.bashrc`
     - $ `python --version` 으로 적용 확인    
     
+## bash
+- timezone 설정
+  - $`timedatectl seet-timezone 'Asia/Seoul'`
