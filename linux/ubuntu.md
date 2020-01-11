@@ -35,4 +35,4 @@
     
 ## bash
 - timezone 설정
-  - $`timedatectl seet-timezone 'Asia/Seoul'`
+  - $`timedatectl set-timezone 'Asia/Seoul'`
