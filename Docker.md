@@ -138,6 +138,16 @@
   ```
   docker run ... --device="/dev/sda1:/dev/sda1"
   ```
+- timezone 변경
+  - ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
+  - (contiainer 안에서 `apt install tzdata`
+  ```
+  docker run \
+  -e TZ=Asia/Seoul \
+  -v /etc/localtime:/etc/localtime:ro \
+  -v /etc/timezone:/etc/timezone:ro \
+  ...
+  ```
 # Docker-compose
 - 기본 파일()을 설정파일로 사용하여 실행
   - `docker-compose up -d`
