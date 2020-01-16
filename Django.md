@@ -1,11 +1,16 @@
 # Django
 
 ## 문법
+### import
+- auth models
+  - `from django.contrib.auth.models import User, Group`
 ### QuerySet
 - 특정한 객체 반환하기
   - `User.objects.get(username='00001')`
 - User 객체의 함수 이용하여 필드값 가져오기
   - `User.objects.get(username='00001').get_username()`
+- Group id 가져오기
+  - `Group.objects.all().get(id=1)`
 
 ## 설치
 - `sudo apt install python3`
