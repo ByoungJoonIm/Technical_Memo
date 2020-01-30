@@ -148,6 +148,18 @@
   -v /etc/timezone:/etc/timezone:ro \
   ...
   ```
+- ssh 설정
+  1. host의 포트 맵핑
+    - `docker run -p '10022:22'`
+  2. container 내에서 openssh-server 설치
+    - `apt install openssh-server`
+  3. container 내에서 ssh config 변경
+    - `vi /etc/ssh/sshd_config`에서 PermitRootLogin yes로 변경
+  4. root 비밀번호 변경
+    - `passwd root`
+  5. ssh 서비스 시작
+    - `service ssh start`
+  
 # Docker-compose
 - 기본 파일()을 설정파일로 사용하여 실행
   - `docker-compose up -d`
