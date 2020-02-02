@@ -179,6 +179,22 @@
     - `sudo service networking restart`
     - 위 명령어로 서비스 재시작이 가능하지만, 방화벽등의 이유로 재부팅 권장
   
+## Cron
+- 고정 스케줄 등록
+  - $ `crontab -e`
+- 스케줄 확인
+  - $ `crontab -l`
+- 스케줄 모두 삭제
+  - $ `crontab -r`
+- 스케쥴 포맷
+  - 'a b c d e f'
+    - a : 분
+    - b : 시
+    - c : 일
+    - d : 월
+    - e : 요일
+    - f : 실행 커맨드
+    - 참고 : 각 숫자 자리에는 *(1 마다), A-B(A에서 B까지), ,(콤마), 등이 들어갈 수 있다.
 
 ## reference
 - [압축 및 해제](https://nota.tistory.com/53)
