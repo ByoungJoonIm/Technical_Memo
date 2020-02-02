@@ -56,6 +56,8 @@
     - `echo "message" > /dev/pts/1`
 - 특정 사용자의 권한으로 실행(현재 루트일 때)
   - $ `su -c '명령어' '사용자명'`
+- 같은 이름의 프로세스 모두 종료
+  - $ `pkill -9 -ef process_name`
 
 ## SSH
 ### Key
