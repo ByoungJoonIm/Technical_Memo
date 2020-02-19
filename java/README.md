@@ -1,6 +1,12 @@
 ## 정렬
-- [[객체 정렬 개념](https://gmlwjd9405.github.io/2018/09/06/java-comparable-and-comparator.html)] [[구현](https://github.com/BJ-Lim/Frameworks/blob/master/java/ComparableExample.java)]
-
+- comparable [[예제](https://github.com/BJ-Lim/Frameworks/blob/master/java/ComparableExample.java)]
+: 객체의 정렬 기준을 정할 때 사용
+  - 클래스를 정의할 때 인터페이스를 상속받아서 작성
+- comparator [[예제](https://github.com/BJ-Lim/Frameworks/blob/master/java/ComparatorExample.java)] : 기존에 정해놓은 객체의 정렬 기준과 다를 때 일시적으로 사용
+  - 객체를 정렬할 때 Comparator 객체를 익명 클래스로 생성하여 사용
+  - 이미 정의된 2차원 배열을 정렬할 때 유용
+  - 익명 클래스 정의시 람다식을 사용하면 더 깔끔하게 작성 가능
+- [객체 정렬 개념 참고 사이트](https://gmlwjd9405.github.io/2018/09/06/java-comparable-and-comparator.html) 
 ## 그 외 문법
 - 문자열 앞 뒤 공백 제거
   ```java
