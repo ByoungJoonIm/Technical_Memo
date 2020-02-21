@@ -40,7 +40,7 @@
   //abstract class를 상속받으면, abstract method는 모두 구현해야 한다.
   //@Override도 사용 가능하다.
     public void method2(){
-		  System.out.println("This is implemented in child class!");
+		  System.out.println("This was implemented in child class!");
     }
 
     public static void main(String args[]){
@@ -53,7 +53,7 @@
   - 실행 결과
     ```
     Hello Abstract Class!
-    This is implemented in child class!
+    This was implemented in child class!
     ```
 ### 인터페이스
 - 인터페이스의 키워드는 `implements`이며, 클래스명의 뒤에 붙는다.
@@ -61,7 +61,47 @@
 - 인터페이스는 특정 함수의 구현을 강제할 때 사용된다.
 - 메소드의 몸체가 없다.
 - 1개 이상의 implements가 가능하다.
-
+- 예제
+  ```java
+  public interface InterfaceA {
+    default void method1(){	//default keyword를 이용한 구현
+      System.out.println("Method1 was implemented in Interface by using default keyword!");
+    };
+    public void method2();
+  }
+  ```
+  ```java
+  public interface InterfaceB {
+    public void method2();
+    public void method3();
+  }
+  ```
+  ```java
+  public class InterfaceTest implements InterfaceA, InterfaceB {
+  //InterfaceA와 InterfaceB 모두 method2를 구현하도록 강제하지만,
+  //구현은 이 클래스에서 일어나므로 모호성은 발생하지 않는다.
+    public void method2(){
+      System.out.println("Method2 was implemented in interfaceTest class! It was forced by InterfaceA and InterfaceB.");
+    }
+	
+    public void method3(){
+      System.out.println("Method3 was implemented in interfaceTest class! It was forced by InterfaceB.");
+    }
+	
+    public static void main(String[] args){
+      InterfaceTest ift = new InterfaceTest();
+      ift.method1();
+      ift.method2();
+      ift.method3();
+    }
+  }
+  ```
+  - 결과
+    ```
+    Method1 was implemented in Interface by using default keyword!
+    Method2 was implemented in interfaceTest class! It was forced by InterfaceA and InterfaceB.
+    Method3 was implemented in interfaceTest class! It was forced by InterfaceB.
+    ```
 ### 추상 클래스와 인터페이스의 비교
 ... | 추상 클래스 | 인터페이스
 ---- | ---- | ----
