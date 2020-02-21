@@ -1,10 +1,47 @@
-## 실행 과정
+## 개념
+### 실행 과정
 - 편집기에서 작성한 코드의 확장자 명은 `.java`이다.
 - `.java` 파일을 javac로 컴파일하면 `.class` 파일이 생성된다.
   - `.class` 파일은 JVM(Java Virtual Machine)에 의해 즉시 실행 가능한 바이트코드이다.
   - `.class`파일은 JVM이 실행하기 때문에 운영체제가 변경되더라도 재컴파일 없이 실행 가능하며, 이를 플랫폼 독립적이라고 부른다.
 
-## 객체 정렬
+### 상속
+- 상속의 키워드는 `extends`이며, 클래스명의 뒤에 붙는다.
+  - ex) public class server extends serverBase
+- 메소드 오버라이딩 혹은 필드명을 참조할 때 `super` 키워드를 사용할 수 있다.
+  ```java
+  public class server extends serverBase{
+    @Override
+    public void run(){
+      super.serverCreateTime = curTime; //명시적으로 부모클래스의 필드 참조
+      super.run();                      //명시적으로 부모클래스의 메소드 호출
+    }
+  }
+  ```
+- 생성자는 묵시적으로 호출하는 경우 부모-자식 순으로 호출되며, 명시적으로 호출시 `super()`를 사용한다.
+  - 부모 클래스의 생성자 형식을 따르며, `super(args...)`의 형식을 따른다.
+- 모호성 방지를 위해서 다중 상속은 불가능하다.
+
+### 추상클래스
+- 몸체를 의도적으로 구현하지 않은(추상) 메소드가 하나라도 있는 클래스를 추상클래스라고 한다.
+- 추상 메소드를 제외한 메소드는 몸체의 구현이 있을 수 있다.
+
+### 인터페이스
+- 인터페이스의 키워드는 `implements`이며, 클래스명의 뒤에 붙는다.
+  - ex) public class server implements iServer
+- 인터페이스는 특정 함수의 구현을 강제할 때 사용된다.
+- 메소드의 몸체가 없다.
+- 1개 이상의 implements가 가능하다.
+
+### 추상 클래스와 인터페이스의 비교
+... | 추상 클래스 | 인터페이스
+---- | ---- | ----
+목적 | 추상 클래스를 상속받아 기능을 이용 및 확장 | 함수의 구현을 강제하여 구현된 클래스로부터 생성된 객체가 동일한 동작이 가능
+특징 | 상속을 받아 사용하기 때문에, 다중 상속이 불가능 | 1개 이상의 implements 가능. 즉, 다중 상속과 비슷한 효과 기대 가능
+구현 정도 | 추상 메소드 이외의 메소드는 구현이 있을 수 있음 | 모든 메소드는 구현이 없음(자바8에서는 default 키워드로 구현 가능)
+
+## 심화
+### 객체 정렬
 - comparable [[예제](https://github.com/BJ-Lim/Frameworks/blob/master/java/ComparableExample.java)]
 : 객체의 정렬 기준을 정할 때 사용
   - 클래스를 정의할 때 인터페이스를 상속받아서 작성
@@ -15,6 +52,7 @@
   - 익명 클래스 정의시 람다식을 사용하면 더 깔끔하게 작성 가능
   - `java.util` 패키지에 속하기 때문에, 별도의 import 필요
 - [객체 정렬 개념 참고 사이트](https://gmlwjd9405.github.io/2018/09/06/java-comparable-and-comparator.html) 
+
 ## 그 외 문법
 - 문자열 앞 뒤 공백 제거
   ```java
