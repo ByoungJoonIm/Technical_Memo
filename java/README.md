@@ -25,7 +25,36 @@
 ### 추상클래스
 - 몸체를 의도적으로 구현하지 않은(추상) 메소드가 하나라도 있는 클래스를 추상클래스라고 한다.
 - 추상 메소드를 제외한 메소드는 몸체의 구현이 있을 수 있다.
+- 예제
+  ```java
+  public abstract class AbstractClass {
+	  public void method1(){
+		  System.out.println("Hello Abstract Class!");
+	  }
+	  
+    public abstract void method2();
+  }
+  ```
+  ```java
+  public class AbstractClassTest extends AbstractClass {     
+  //abstract class를 상속받으면, abstract method는 모두 구현해야 한다.
+  //@Override도 사용 가능하다.
+    public void method2(){
+		  System.out.println("This is implemented in child class!");
+	  }
 
+    public static void main(String args[]){
+		  AbstractClassTest act = new AbstractClassTest();
+		  act.method1();
+		  act.method2();
+	  }
+  }
+  ```
+  - 실행 결과
+    ```
+    Hello Abstract Class!
+    This is implemented in child class!
+    ```
 ### 인터페이스
 - 인터페이스의 키워드는 `implements`이며, 클래스명의 뒤에 붙는다.
   - ex) public class server implements iServer
