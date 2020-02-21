@@ -28,9 +28,9 @@
 - 예제
   ```java
   public abstract class AbstractClass {
-	  public void method1(){
-		  System.out.println("Hello Abstract Class!");
-	  }
+    public void method1(){
+      System.out.println("Hello Abstract Class!");
+    }
 	  
     public abstract void method2();
   }
@@ -41,13 +41,13 @@
   //@Override도 사용 가능하다.
     public void method2(){
 		  System.out.println("This is implemented in child class!");
-	  }
+    }
 
     public static void main(String args[]){
 		  AbstractClassTest act = new AbstractClassTest();
 		  act.method1();
 		  act.method2();
-	  }
+    }
   }
   ```
   - 실행 결과
