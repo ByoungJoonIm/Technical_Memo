@@ -10,11 +10,11 @@
   - ex) public class server extends serverBase
 - 메소드 오버라이딩 혹은 필드명을 참조할 때 `super` 키워드를 사용할 수 있다.
   ```java
-  public class server extends serverBase{
+  public class Server extends ServerBase{
     @Override
     public void run(){
-      super.serverCreateTime = curTime; //명시적으로 부모클래스의 필드 참조
-      super.run();                      //명시적으로 부모클래스의 메소드 호출
+      super.serverCreatedTime = curTime;  //명시적으로 부모클래스의 필드 참조
+      super.run();                        //명시적으로 부모클래스의 메소드 호출
     }
   }
   ```
