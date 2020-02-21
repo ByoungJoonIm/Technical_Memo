@@ -1,3 +1,9 @@
+## 실행 과정
+- 편집기에서 작성한 코드의 확장자 명은 `.java`이다.
+- `.java` 파일을 javac로 컴파일하면 `.class` 파일이 생성된다.
+  - `.class` 파일은 JVM(Java Virtual Machine)에 의해 즉시 실행 가능한 바이트코드이다.
+  - `.class`파일은 JVM이 실행하기 때문에 운영체제가 변경되더라도 재컴파일 없이 실행 가능하며, 이를 플랫폼 독립적이라고 부른다.
+
 ## 객체 정렬
 - comparable [[예제](https://github.com/BJ-Lim/Frameworks/blob/master/java/ComparableExample.java)]
 : 객체의 정렬 기준을 정할 때 사용
