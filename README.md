@@ -18,3 +18,7 @@
 # Tensorflow
 - [tensorflow](https://github.com/ByoungJoonIm/Frameworks/blob/master/Tensorflow.md)
 - [keras example](https://github.com/ByoungJoonIm/Frameworks/blob/master/Keras_examples/Keras_example.ipynb)
+
+# Computer Science Concept
+## Network
+- [network](https://github.com/ByoungJoonIm/Technical_Memo/blob/master/computer_science_concept/network.md)
