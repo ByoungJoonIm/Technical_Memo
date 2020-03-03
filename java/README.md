@@ -178,6 +178,7 @@
   This is printed in Thread2!
   This is printed in Thread1!
   ```
+- 동기화 문제 해결 : 공유자원을 사용하는 메소드에 `synchronized` 키워드 사용
 
 ## 심화
 ### 객체 정렬
