@@ -1,5 +1,4 @@
 # Computer Science Concept
-## Network
 - [network](https://github.com/ByoungJoonIm/Technical_Memo/blob/master/computer_science_concept/network.md)
 - [os](https://github.com/ByoungJoonIm/Technical_Memo/blob/master/computer_science_concept/os.md)
 
