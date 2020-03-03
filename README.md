@@ -1,3 +1,8 @@
+# Computer Science Concept
+## Network
+- [network](https://github.com/ByoungJoonIm/Technical_Memo/blob/master/computer_science_concept/network.md)
+- [os](https://github.com/ByoungJoonIm/Technical_Memo/blob/master/computer_science_concept/os.md)
+
 # Frameworks
 ## Docker
 - [docker](https://github.com/BJ-Lim/Frameworks/blob/master/Docker.md)
@@ -15,10 +20,6 @@
 - [리눅스 공통](https://github.com/ByoungJoonIm/Frameworks/blob/master/linux/Linux(common).md)
 - [Ubuntu](https://github.com/ByoungJoonIm/Frameworks/blob/master/linux/ubuntu.md)
 - [레드햇](https://github.com/ByoungJoonIm/Frameworks/blob/master/linux/redhat.md)
-# Tensorflow
+## Tensorflow
 - [tensorflow](https://github.com/ByoungJoonIm/Frameworks/blob/master/Tensorflow.md)
 - [keras example](https://github.com/ByoungJoonIm/Frameworks/blob/master/Keras_examples/Keras_example.ipynb)
-
-# Computer Science Concept
-## Network
-- [network](https://github.com/ByoungJoonIm/Technical_Memo/blob/master/computer_science_concept/network.md)
