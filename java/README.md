@@ -109,6 +109,35 @@
 특징 | 상속을 받아 사용하기 때문에, 다중 상속이 불가능 | 1개 이상의 implements 가능. 즉, 다중 상속과 비슷한 효과 기대 가능
 구현 정도 | 추상 메소드 이외의 메소드는 구현이 있을 수 있음 | 모든 메소드는 구현이 없음(자바8에서는 default 키워드로 구현 가능)
 
+### 예외 처리
+- 예외 처리 흐름
+  ```java
+  import java.io.IOException;
+
+  public class TryCatchFlow {
+    private static void depth3() throws IOException{
+      throw new IOException();	//IOException 발생
+    }
+	
+    private static void depth2() throws IOException{
+      depth3();
+    }
+	
+    private static void depth1(){
+      try{
+        depth2();
+      } catch (IOException ioe){	//IOException 처리
+        System.out.println("Catched IOException in depth1");
+      }
+    }
+	
+    public static void main(String[] args) {
+      depth1();
+    }
+  }
+  ```
+  - 호출 순서 : main -> depth1 -> depth2 -> depth3 -> 예외 발생 -> depth2 -> depth1 -> 예외 처리
+
 ## 심화
 ### 객체 정렬
 - comparable [[예제](https://github.com/BJ-Lim/Frameworks/blob/master/java/ComparableExample.java)]
