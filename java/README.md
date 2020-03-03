@@ -138,6 +138,43 @@
   ```
   - 호출 순서 : main -> depth1 -> depth2 -> depth3 -> 예외 발생 -> depth2 -> depth1 -> 예외 처리
 
+### 쓰레드
+- 목적 : 하나의 프로그램이 여러 작업을 동시에 수행하기 위해서 사용
+- 사용 방법
+  - Thread 클래스를 상속받아 run 메소드를 재정의
+  - Runnable 인터페이스를 구현한 객체를 쓰레드 생성시 생성자 매개변수로 전달해주는 방법
+- 예제
+  ```java
+  public class ThreadTest {
+    private static class Thread1 extends Thread{
+      @Override
+        public void run(){
+          System.out.println("This is printed in Thread1!");
+        }
+    }
+	
+    private static class Thread2 implements Runnable{
+      @Override
+      public void run(){
+        System.out.println("This is printed in Thread2!");
+      }
+    }
+	
+    public static void main(String[] args) {
+      Thread1 thread1 = new Thread1();
+      Thread thread2 = new Thread(new Thread2());
+		
+      thread1.run();
+      thread2.run();
+    }
+  }
+- 결과
+  ```
+  This is printed in Thread1!
+  This is printed in Thread2!
+  ```
+  ```
+
 ## 심화
 ### 객체 정렬
 - comparable [[예제](https://github.com/BJ-Lim/Frameworks/blob/master/java/ComparableExample.java)]
