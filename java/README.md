@@ -164,8 +164,8 @@
       Thread1 thread1 = new Thread1();
       Thread thread2 = new Thread(new Thread2());
 		
-      thread1.run();
-      thread2.run();
+      thread1.start();
+      thread2.start();
     }
   }
 - 결과
@@ -173,6 +173,10 @@
   This is printed in Thread1!
   This is printed in Thread2!
   ```
+  또는
+  ```
+  This is printed in Thread2!
+  This is printed in Thread1!
   ```
 
 ## 심화
