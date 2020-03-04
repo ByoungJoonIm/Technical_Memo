@@ -22,3 +22,6 @@
 ## Tensorflow
 - [tensorflow](https://github.com/ByoungJoonIm/Frameworks/blob/master/Tensorflow.md)
 - [keras example](https://github.com/ByoungJoonIm/Frameworks/blob/master/Keras_examples/Keras_example.ipynb)
+
+# 개발 방법론
+- [UML Diagram](http://www.nextree.co.kr/p6753/)
