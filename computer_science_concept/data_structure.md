@@ -126,6 +126,7 @@
   - 신장 트리(Spanning Tree) : 그래프에 있는 모든 간선과 정점으로 구성된 트리
     - 깊이 우선 신장 트리(Depth First Spanning Tree) : DFS를 사용하여 만든 신장 트리
     - 너비 우선 신장 트리(Breadth First Spanning Tree) : BFS를 사용하여 만든 신장 트리
+  - 최소 비용 신장 트리(Minumum cost spanning tree) : 트리를 구성하는 간선들의 가중치를 합한 것이 최소가 되는 신장 트리
   - 최소 연결 부분 그래프(Minimal Connected Subgraph) : 연결 그래프이면서 최소의 간선 수를 포함한 그래프
 - 표현
   - 인접 행렬(Adjacency Matrix) : 정점을 인덱스로, 값을 연결 상태로 하는 2차원 배열
@@ -136,6 +137,5 @@
   - 종류
     - 깊이 우선 탐색(Depth First Search) : 최대한 노드에 깊이 들어며 순회한 뒤 돌아오는 방식
     - 너비 우선 탐색(Breadth First Search) : 인접노드를 모두 순회한 뒤 인접노드들의 인접노드들을 순회하는 방식
-  
-  
+
 
