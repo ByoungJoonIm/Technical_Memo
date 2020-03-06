@@ -103,7 +103,12 @@
   - E : 상이한 두 정점을 잇는 간선(edge)의 유한집합
 - 용어
   - 무방향 그래프(Undirected Graph) : 간선을 표현하는 두 정점의 쌍에 순서가 없는 그래프
+    - 차수(degree) : 무방향 그래프에서 그 정점에 부속된 간선의 수
   - 방향 그래프(Directed Graph) : 간선을 표현하는 두 정점의 쌍에 순서가 있는 그래프
+    - 진입 차수(indegree) : 방향 그래프에서 정점 v를 머리로 하는 간선의 수
+    - 진출 차수(outdegree) : 방향 그래프에서 정점 v를 꼬리로 하는 간선의 수
+    - 선행자(predecessor) : 정점 v를 머리로 하는 간선들의 정점
+    - 후행자(successor) : 정점 v를 꼬리로 하는 간선들의 정점
   - 단순 그래프(Simple Graph) : 자기 루프가 불가능 하며, 두 정점 사이에 최대 하나의 간선이 존재하는 그래프
   - 다중 그래프(multi graph) : 두 정점 사이에 복수의 간선이 존재하는 그래프
   - 완전 그래프(Complete Graph) : 최대 수의 간선을 가진 그래프
@@ -112,9 +117,25 @@
   - 경로의 길이(Path Length) : 경로를 구성하는 간선의 수
   - 단순 경로(Simple Path) : 모두 상이한 간선들로 구성된 경로
   - 사이클(cycle) : 첫 번째 정점과 마지막 정점이 동일한 단순 경로
-
-
-
-
-
+  - DAG(Directed Acyclic Graph) : 방향 그래프에서 사이클이 없는 그래프
+  - 연결 그래프(Connected Graph) : 서로 다른 모든 쌍의 정점들 사이에 경로가 있는 무방향 그래프
+  - 연결 요소(Connecected Component) : 최대(최대의 정점과 최대의 간선) 연결 부분 그래프
+  - 강력 연결(Strongly Connected) : 한 정점에서 다른 정점가지의 경로가 모두 존재
+  - 약한 연결(Weakly Connected) : 한 정점에서 다른 정점까지의 경로만 존재(반대 경로는 존재하지 않음)
+  - 강력 연결 요소(Strongly Connected Component) : 강력 연결된 최대 부분 그래프
+  - 신장 트리(Spanning Tree) : 그래프에 있는 모든 간선과 정점으로 구성된 트리
+    - 깊이 우선 신장 트리(Depth First Spanning Tree) : DFS를 사용하여 만든 신장 트리
+    - 너비 우선 신장 트리(Breadth First Spanning Tree) : BFS를 사용하여 만든 신장 트리
+  - 최소 연결 부분 그래프(Minimal Connected Subgraph) : 연결 그래프이면서 최소의 간선 수를 포함한 그래프
+- 표현
+  - 인접 행렬(Adjacency Matrix) : 정점을 인덱스로, 값을 연결 상태로 하는 2차원 배열
+  - 인접 리스트(Adjacency List) : n개의 정점 각각에 대한 인접한 정점들을 리스트로 표현
+  - 인접 다중 리스트(Adjacency MultiList) : 간선에 부속된 두 정점 각각에 대한 인접 리스트를 다중 리스트로 유지하여 하나의 간선을 두 개의 리스트가 공유하는 리스트
+- 순회
+  - 정의 : 주어진 어떤 정점을 출발하여 체계적으로 그래프의 모든 정점들을 순회하는 것
+  - 종류
+    - 깊이 우선 탐색(Depth First Search) : 최대한 노드에 깊이 들어며 순회한 뒤 돌아오는 방식
+    - 너비 우선 탐색(Breadth First Search) : 인접노드를 모두 순회한 뒤 인접노드들의 인접노드들을 순회하는 방식
+  
+  
 
