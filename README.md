@@ -1,6 +1,9 @@
 # Computer Science Concept
-- [network](https://github.com/ByoungJoonIm/Technical_Memo/blob/master/computer_science_concept/network.md)
-- [os](https://github.com/ByoungJoonIm/Technical_Memo/blob/master/computer_science_concept/os.md)
+- [네트워크](https://github.com/ByoungJoonIm/Technical_Memo/blob/master/computer_science_concept/network.md)
+- [운영체제](https://github.com/ByoungJoonIm/Technical_Memo/blob/master/computer_science_concept/os.md)
+- [자료구조](https://github.com/ByoungJoonIm/Technical_Memo/blob/master/computer_science_concept/data_structure.md)
+- [알고리즘](https://github.com/ByoungJoonIm/Technical_Memo/blob/master/computer_science_concept/algorithm.md)
+- [언어의 특성](https://github.com/ByoungJoonIm/Technical_Memo/blob/master/computer_science_concept/language.md)
 
 # Frameworks
 ## Docker
