@@ -11,17 +11,24 @@
   - Django 공식 사이트 예제
 - [example2](https://github.com/BJ-Lim/Frameworks/tree/master/Django_Example/ch2/)
   - 파이썬 웹 프로그래밍, 실전편(김석훈, 한빛미디어)
-## Java
-- [java](https://github.com/ByoungJoonIm/Frameworks/blob/master/java/README.md)
-## Python
-- [python](https://github.com/ByoungJoonIm/Frameworks/blob/master/python.md)
-## Linux
-- [리눅스 공통](https://github.com/ByoungJoonIm/Frameworks/blob/master/linux/Linux(common).md)
-- [Ubuntu](https://github.com/ByoungJoonIm/Frameworks/blob/master/linux/ubuntu.md)
-- [레드햇](https://github.com/ByoungJoonIm/Frameworks/blob/master/linux/redhat.md)
 ## Tensorflow
 - [tensorflow](https://github.com/ByoungJoonIm/Frameworks/blob/master/Tensorflow.md)
 - [keras example](https://github.com/ByoungJoonIm/Frameworks/blob/master/Keras_examples/Keras_example.ipynb)
 
+# Languages
+- [java](https://github.com/ByoungJoonIm/Frameworks/blob/master/java/README.md)
+- [python](https://github.com/ByoungJoonIm/Frameworks/blob/master/python.md)
+
+# Operating System
+## Linux
+- [리눅스 공통](https://github.com/ByoungJoonIm/Frameworks/blob/master/linux/Linux(common).md)
+- [Ubuntu](https://github.com/ByoungJoonIm/Frameworks/blob/master/linux/ubuntu.md)
+- [레드햇](https://github.com/ByoungJoonIm/Frameworks/blob/master/linux/redhat.md)
+
 # 개발 방법론
+## 다이어그램
 - [UML Diagram](http://www.nextree.co.kr/p6753/)
+## 디자인 패턴
+
+# VCS(Version Control System)
+- [git](https://github.com/ByoungJoonIm/Technical_Memo/blob/master/vsc/git.md)
