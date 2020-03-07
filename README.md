@@ -29,9 +29,8 @@
 - [레드햇](https://github.com/ByoungJoonIm/Frameworks/blob/master/linux/redhat.md)
 
 ## 개발 방법론
-### 다이어그램
 - [UML Diagram](http://www.nextree.co.kr/p6753/)
-### 디자인 패턴
+- [디자인 패턴](https://github.com/ByoungJoonIm/Technical_Memo/blob/master/development_theory/design_pattern.md)
 
 ## VCS(Version Control System)
 - [git](https://github.com/ByoungJoonIm/Technical_Memo/blob/master/vsc/git.md)
