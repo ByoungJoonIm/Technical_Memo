@@ -1,3 +1,19 @@
+### OSI 7 Layer
+- OSI(Open Systems Interconnection Reference Model)은 국제표준화기구(ISO, International Organization for Standardization)에서 개발한 통신 계층 모델
+- 통신이 일어나는 과정을 단계별로 파악 가능
+- 각 Layer별로 표준이 정해져 있기 때문에, 여러 회사가 만든 각기 다른 장비를 사용해도 호환이 가능 
+
+계층 번호 | 계층 | 하는 일 | 대표 장비
+----- | ---- | ---- | ----
+7 | 응용 | HTTP/POP3/IMAP/FTP 등의 사용자가 사용하는 프로토콜 | .
+6 | 표현 | 인코딩 / 암호화를 통해 이해할 수 있는 포맷으로 변환 | .
+5 | 세션 | TCP / IP 연결 관리 | .
+4 | 전송 | UDP/TCP로 전송 | 게이트웨이
+3 | 네트워크 | 라우팅 | 라우터
+2 | 데이터 링크 | 데이터 오류 검출/수정 | 브릿지, 스위치
+1 | 물리 | 실제 데이터 전송 | 리피터, 허브
+
+
 ### IP Address
 - 범위에 따른 클래스 구분
 
