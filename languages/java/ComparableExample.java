@@ -17,14 +17,14 @@ class Elem implements Comparable<Elem>{
 	}
 	
 	/*
-	 * 1¼øÀ§´Â elem1À¸·Î Á¤·Ä, 2½¼À§´Â elem2·Î Á¤·Ä(1¼øÀ§ °ªÀÌ °°Àº °æ¿ì)
+	 * 1ìˆœìœ„ëŠ” elem1ìœ¼ë¡œ ì •ë ¬, 2ìŠ¨ìœ„ëŠ” elem2ë¡œ ì •ë ¬(1ìˆœìœ„ ê°’ì´ ê°™ì€ ê²½ìš°)
 	 * */
 	@Override
 	public int compareTo(Elem elem){
 		if( elem1 > elem.elem1)
 			return 1;
 		else if ( elem1 == elem.elem1){	
-			if( elem2 > elem.elem2)			//elem2´Â ¿À¸§Â÷¼ø
+			if( elem2 > elem.elem2)			//elem2ëŠ” ì˜¤ë¦„ì°¨ìˆœ
 				return 1;
 		}
 		return -1;
