@@ -182,11 +182,11 @@
 
 ## 심화
 ### 객체 정렬
-- comparable [[예제](https://github.com/BJ-Lim/Frameworks/blob/master/java/ComparableExample.java)]
+- comparable [[예제](https://github.com/ByoungJoonIm/Technical_Memo/blob/master/languages/java/ComparableExample.java)]
 : 객체의 정렬 기준을 정할 때 사용
   - 클래스를 정의할 때 인터페이스를 상속받아서 작성
   - `java.lang` 패키지에 속하기 때문에, 별도의 import없이 implements 가능
-- comparator [[예제](https://github.com/BJ-Lim/Frameworks/blob/master/java/ComparatorExample.java)] : 기존에 정해놓은 객체의 정렬 기준과 다를 때 일시적으로 사용
+- comparator [[예제](https://github.com/BJ-Lim/Frameworks/blob/master/languages/java/ComparatorExample.java)] : 기존에 정해놓은 객체의 정렬 기준과 다를 때 일시적으로 사용
   - 객체를 정렬할 때 Comparator 객체를 익명 클래스로 생성하여 사용
   - 자바에서는 배열도 객체이기 때문에, 이미 정의된 2차원 배열을 정렬할 때 유용
   - 익명 클래스 정의시 람다식을 사용하면 더 깔끔하게 작성 가능
