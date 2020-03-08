@@ -59,3 +59,36 @@
   - union : 합집합, or
   - intersect : 교집합, and
   - except : 차집합, not in
+- 집성함수 : 릴레이션의 행의 다중 집합 값에 연산하여 단일 값을 반환
+  ```SQL
+  select avg (salary)
+  from instructor
+  where dept_name='comp.sci';
+  ```
+  - avg, min, max, sum, count 사용 가능
+- having절
+  ```SQL
+  select dept_name, avg(salary)
+  from instructor
+  group by dept_name
+  having avg(salary) > 42000;
+  ```
+  - having 절은 그룹이 이루어진 후에 적용. where 절은 그룹이 이루어지기 전에 적용
+- delete
+  ```SQL
+  delete from instructor
+  where dept_name='Finance';
+  ```
+- insert
+  ```SQL
+  insert into course values('CS-437', 'Database Systems', 'comp.sci', 4);
+  ```
+  ```SQL
+  insert into course(course_id, title, dept_name, credits) values('CS-437', 'Database Systems', 'comp.sci', 4);
+  ```
+- update : 수정
+  ```SQL
+  update instructor
+  set salary = salary * 1.03
+  where salary > 100000;
+  ```
