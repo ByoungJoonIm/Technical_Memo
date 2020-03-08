@@ -19,7 +19,7 @@
 - [keras example](https://github.com/ByoungJoonIm/Frameworks/blob/master/Keras_examples/Keras_example.ipynb)
 
 ## Languages
-- [java](https://github.com/ByoungJoonIm/Frameworks/blob/master/java/README.md)
+- [java](https://github.com/ByoungJoonIm/Frameworks/blob/master/languages/java/README.md)
 - [python](https://github.com/ByoungJoonIm/Frameworks/blob/master/python.md)
 
 ## Operating System
