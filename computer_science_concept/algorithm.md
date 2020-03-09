@@ -79,21 +79,21 @@
       if(left > right)						
         return ;
 
-      int p = partition(arr, left, right);		//p는 파티션이 끝난 뒤에 사용된 피봇의 인덱스
-        internalQuickSort(arr, left, p-1);		//앞부분
-        internalQuickSort(arr, p+1, right);		//뒷부분
+      int p = partition(arr, left, right);      //p는 파티션이 끝난 뒤에 사용된 피봇의 인덱스
+        internalQuickSort(arr, left, p-1);      //앞부분
+        internalQuickSort(arr, p+1, right);     //뒷부분
       }
 	
     private static int partition(int arr[], int left, int right){
       swap(arr, left, (left + right) / 2);	//pivot을 중간값과 바꿔서 평균 O(nlogn)이 되도록 함
-      int pivot = arr[left];		        //맨 좌측 원소값을 pivot으로 잡음
+      int pivot = arr[left];                    //맨 좌측 원소값을 pivot으로 잡음
 
-      int p = left;			        //p는 두 파티션의 경계 인덱스
+      int p = left;                             //p는 두 파티션의 경계 인덱스
 
-      for(int i = left + 1; i <= right; i++){	//a[i+1] ~ a[j]에 있는 모든 원소를 검사하여
-        if(arr[i] < pivot){		        //a[k]가 pivot보다 작으면 
-          p++;				        //p를 1 증가시켜 a[k]를 p인덱스 범위 안으로 포함되게 함
-          swap(arr, p, i);	                //a[p] 와 a[k] 위치 교환
+      for(int i = left + 1; i <= right; i++){   //a[i+1] ~ a[j]에 있는 모든 원소를 검사하여
+        if(arr[i] < pivot){                     //a[k]가 pivot보다 작으면 
+          p++;                                  //p를 1 증가시켜 a[k]를 p인덱스 범위 안으로 포함되게 함
+          swap(arr, p, i);                      //a[p] 와 a[k] 위치 교환
         }
       }
 
