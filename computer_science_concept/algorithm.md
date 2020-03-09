@@ -16,6 +16,66 @@
   
 ## 탐색
 - 이진 탐색
+  ```java  
+  import java.io.BufferedWriter;
+  import java.io.IOException;
+  import java.io.OutputStreamWriter;
+
+  public class BinarySearch {
+	  //재귀로 구현
+	  private static int binSearch(int arr[], int left, int right, int value){
+      if(left > right)
+        return -1;
+		
+      int mid = (left + right) / 2;
+		
+      if(arr[mid] == value)
+        return mid;
+      if(arr[mid] < value)
+        return binSearch(arr, mid + 1, right, value);
+      if(arr[mid] > value)
+        return binSearch(arr, left, mid - 1, value);
+		
+      return -1;	//This will not occured
+    }
+
+    //반복으로 구현
+    private static int binSearch(int arr[], int value){
+      int left = 0;
+      int right = arr.length - 1;
+		
+      while(left <= right){
+        int mid = (left + right) / 2;
+			
+        if(arr[mid] == value)
+          return mid;
+        if(arr[mid] < value)
+          left = mid + 1;
+        if(arr[mid] > value)
+          right = mid - 1;
+      }
+		
+		  return -1;
+    }
+	
+    public static void main(String[] args) throws IOException {
+      BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+      int arr[] = {1,2,3,4,5,6,7,8,9};
+		
+      bw.write("-----recursive binSearch()-----\n");
+      for (int i = 0; i < arr.length + 2; i++) {
+        bw.write(i + " : " + binSearch(arr, 0, arr.length - 1, i) + "\n");
+      }
+		
+      bw.write("-----binSearch() without recursive call-----\n");
+      for (int i = 0; i < arr.length + 2; i++) {
+        bw.write(i + " : " + binSearch(arr, i) + "\n");
+      }
+		
+      bw.close();
+    }
+  }
+  ```
  
 ## 최단 경로
 - 하나의 정점에서 다른 모든 정점까지의 최단 경로 : Dijkstra 알고리즘
