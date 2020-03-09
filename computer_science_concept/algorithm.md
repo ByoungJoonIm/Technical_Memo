@@ -44,6 +44,20 @@
 - O(nlogn)
   - 합병 정렬 : 배열을 이등분하여 각각 정렬한 후 합병
     ```java
+    private static void mergeSort(int arr[]){
+      internalMergeSort(arr, 0, arr.length - 1);
+    }
+    
+    private static void internalMergeSort(int arr[], int left, int right){
+      int mid = (left + right) / 2;
+		
+      if(left < right){
+        internalMergeSort(arr, left, mid);
+        internalMergeSort(arr, mid + 1, right);
+        merge(arr, left, mid, right);	
+      }
+    }
+
     private static void merge(int arr[], int left, int mid, int right){
       int rs[] = new int[right - left + 1];
       int rsIndex = 0;
