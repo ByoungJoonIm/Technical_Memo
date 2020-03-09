@@ -70,6 +70,38 @@
     }
     ```
   - 퀵 정렬 : 한 원소를 pivot으로 선정하고 pivot 기준으로 2개의 파티션으로 분할한 뒤 왼쪽 파티션에는 pivot보다 작은 값, 오른쪽 파티션에는 pivot보다 크거나 같은 값을 배치하여 순환 적용
+    ```java
+    public static void quickSort(int[] arr){		//quick 정렬
+      internalQuickSort(arr, 0, arr.length-1);
+    }
+	
+    private static void internalQuickSort(int[] arr, int left, int right){		//quick정렬 내부 메소드. 재귀를 이용
+      if(left > right)						//시작인덱스가 더 큰 경우 종료
+        return ;
+
+      int p = partition(arr, left, right);		//p는 파티션이 끝난 뒤에 사용된 피봇의 인덱스
+        internalQuickSort(arr, left, p-1);		//앞부분
+        internalQuickSort(arr, p+1, right);		//뒷부분
+      }
+	
+    private static int partition(int arr[], int left, int right){
+      swap(arr, left, (left + right) / 2);	//pivot을 중간값과 바꿔서 평균 O(nlogn)이 되도록 함
+      int pivot = arr[left];		//맨 좌측 원소값을 pivot으로 잡음
+
+      int p = left;			//p는 두 파티션의 경계 인덱스
+
+      for(int i = left + 1; i <= right; i++){	//a[i+1] ~ a[j]에 있는 모든 원소를 검사하여
+        if(arr[i] < pivot){		//a[k]가 pivot보다 작으면 
+          p++;				//p를 1 증가시켜 a[k]를 p인덱스 범위 안으로 포함되게 함
+          swap(arr, p, i);	//a[p] 와 a[k] 위치 교환
+        }
+      }
+
+      swap(arr, left, p);			//a[i]와 a[p]위치 교환
+		
+      return p;
+    }	
+    ```
   - 히프 정렬 : 정렬할 원소를 모두 공백 히프에 삽입한 뒤 루트 노드를 차례로 삭제하여 리스트 뒤에 삽입
   - 트리 정렬 : 배열을 (중복이 허용되는)이진 정렬 트리에 삽입한 뒤, 중위 우선 순회 방법으로 원소를 하나씩 검색하여 원래의 배열에 저장
 - O(n^1.25)
