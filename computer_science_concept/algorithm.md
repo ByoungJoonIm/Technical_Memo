@@ -43,6 +43,32 @@
     ```
 - O(nlogn)
   - 합병 정렬 : 배열을 이등분하여 각각 정렬한 후 합병
+    ```java
+    private static void merge(int arr[], int left, int mid, int right){
+      int rs[] = new int[right - left + 1];
+      int rsIndex = 0;
+      int leftIndex = left;
+      int rightIndex = mid + 1;
+	
+      while(leftIndex <= mid && rightIndex <= right){
+        if(arr[leftIndex] <= arr[rightIndex])
+	  rs[rsIndex++] = arr[leftIndex++];
+	else
+	  rs[rsIndex++] = arr[rightIndex++];
+      }
+		
+      while(leftIndex <= mid)
+        rs[rsIndex++] = arr[leftIndex++];
+		
+      while(rightIndex <= right)
+        rs[rsIndex++] = arr[rightIndex++];
+		
+		
+      for (int i = 0; i < rs.length; i++) {
+        arr[left + i] = rs[i];
+      }
+    }
+    ```
   - 퀵 정렬 : 한 원소를 pivot으로 선정하고 pivot 기준으로 2개의 파티션으로 분할한 뒤 왼쪽 파티션에는 pivot보다 작은 값, 오른쪽 파티션에는 pivot보다 크거나 같은 값을 배치하여 순환 적용
   - 히프 정렬 : 정렬할 원소를 모두 공백 히프에 삽입한 뒤 루트 노드를 차례로 삭제하여 리스트 뒤에 삽입
   - 트리 정렬 : 배열을 (중복이 허용되는)이진 정렬 트리에 삽입한 뒤, 중위 우선 순회 방법으로 원소를 하나씩 검색하여 원래의 배열에 저장
