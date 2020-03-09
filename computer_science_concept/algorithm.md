@@ -22,8 +22,8 @@
   import java.io.OutputStreamWriter;
 
   public class BinarySearch {
-	  //재귀로 구현
-	  private static int binSearch(int arr[], int left, int right, int value){
+    //재귀로 구현
+    private static int binSearch(int arr[], int left, int right, int value){
       if(left > right)
         return -1;
 		
