@@ -14,15 +14,15 @@
     }
     ```
   - 버블 정렬 : 가장 큰 원소를 오른쪽 끝으로 보내며 순차적으로 윈도우를 왼쪽으로 옮기며 정렬
-  ```java
-  private static void bubbleSort(int arr[]){
-    for (int i = arr.length - 1; i > 0; i--) {
-      for (int j = 0; j < i; j++) {
-        if(arr[j] > arr[j + 1])
-          swap(arr, j, j + 1);
+    ```java
+    private static void bubbleSort(int arr[]){
+      for (int i = arr.length - 1; i > 0; i--) {
+        for (int j = 0; j < i; j++) {
+          if(arr[j] > arr[j + 1])
+            swap(arr, j, j + 1);
+        }
       }
     }
-  }
   ```
   - 삽입 정렬 : 윈도우를 0번부터 시작하여 끝가지 이동하며 지금까지 정렬된 값 중 올바른 위치에 삽입
 - O(nlogn)
