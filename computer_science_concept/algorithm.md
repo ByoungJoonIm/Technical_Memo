@@ -52,9 +52,9 @@
 	
       while(leftIndex <= mid && rightIndex <= right){
         if(arr[leftIndex] <= arr[rightIndex])
-	  rs[rsIndex++] = arr[leftIndex++];
-	else
-	  rs[rsIndex++] = arr[rightIndex++];
+          rs[rsIndex++] = arr[leftIndex++];
+        else
+          rs[rsIndex++] = arr[rightIndex++];
       }
 		
       while(leftIndex <= mid)
