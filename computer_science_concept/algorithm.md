@@ -23,8 +23,24 @@
         }
       }
     }
-  ```
+    ```
   - 삽입 정렬 : 윈도우를 0번부터 시작하여 끝가지 이동하며 지금까지 정렬된 값 중 올바른 위치에 삽입
+    ```java
+    private static void insertionSort(int arr[]){
+      for (int i = 1; i < arr.length; i++) {
+        for (int j = 0; j < i; j++) {
+          if(arr[j] > arr[i]){
+            int temp = arr[i];
+            for (int k = i; k > j; k--) {
+              arr[k] = arr[k - 1];
+            }
+            arr[j] = temp;
+            break;
+          }
+        }
+      }
+    }
+    ```
 - O(nlogn)
   - 합병 정렬 : 배열을 이등분하여 각각 정렬한 후 합병
   - 퀵 정렬 : 한 원소를 pivot으로 선정하고 pivot 기준으로 2개의 파티션으로 분할한 뒤 왼쪽 파티션에는 pivot보다 작은 값, 오른쪽 파티션에는 pivot보다 크거나 같은 값을 배치하여 순환 적용
