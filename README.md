@@ -11,10 +11,8 @@
 - [docker](https://github.com/BJ-Lim/Frameworks/blob/master/Docker.md)
 - [발표 자료](https://github.com/ByoungJoonIm/Frameworks/blob/master/Docker.pptx)
 ### Django
-- [example1](https://github.com/BJ-Lim/Frameworks/blob/master/Django.md)
-  - Django 공식 사이트 예제
-- [example2](https://github.com/BJ-Lim/Frameworks/tree/master/Django_Example/ch2/)
-  - 파이썬 웹 프로그래밍, 실전편(김석훈, 한빛미디어)
+- [example1](https://github.com/BJ-Lim/Frameworks/blob/master/Django.md) : Django 공식 사이트 예제
+- [example2](https://github.com/BJ-Lim/Frameworks/tree/master/Django_Example/ch2/) : 파이썬 웹 프로그래밍, 실전편(김석훈, 한빛미디어)
 ### Tensorflow
 - [tensorflow](https://github.com/ByoungJoonIm/Frameworks/blob/master/Tensorflow.md)
 - [keras example](https://github.com/ByoungJoonIm/Frameworks/blob/master/Keras_examples/Keras_example.ipynb)
