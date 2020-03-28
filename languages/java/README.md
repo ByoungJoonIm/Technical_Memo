@@ -260,3 +260,10 @@
   ArrayList<Integer> al = new ArrayList<Integer>();
   int arr[] = Collections.toArray(al);
   ```
+- 큰 정수 표현 객체
+  ```java
+  BigInteger n = new BigInteger(br.readLine());
+  BigInteger m = new BigInteger(br.readLine());
+  bw.write(n.multiply(m) + "\n");
+  bw.write(n.add(m) + "\n");
+  ```
