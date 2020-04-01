@@ -29,3 +29,7 @@
 - amend : 커밋의 내용 수정
 - stash : 현재 변경 이력을 임시 저장하여 다른 브랜치로 checkout이 가능하도록 함
 
+## 문법
+### bash(git)
+- 가장 최근의 커밋 내용 변경하기
+  - $`git commit --amend -m "new commit message"`
