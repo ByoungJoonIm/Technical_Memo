@@ -196,6 +196,12 @@
     - f : 실행 커맨드
     - 참고 : 각 숫자 자리에는 *(1 마다), A-B(A에서 B까지), ,(콤마), 등이 들어갈 수 있다.
 
+## Time
+- 시간 패키지 설치
+  - $ `apt install tzdata`
+- 시간 재설정
+  - $ `dpkg-reconfigure tzdata`
+
 ## reference
 - [압축 및 해제](https://nota.tistory.com/53)
 - [swap 관리](https://htst.tistory.com/32)
