@@ -222,6 +222,11 @@
   	hm.put("abc", hm.get("abc") + 1);
   System.out.println(hm.get("abc"));      //11
   ```
+- HashMap과 람다식으로 더 간단하게 사용하기
+  ```java
+  hm.computeIfPresent("abc", (Integer String, Boolean value) -> value++);
+  hm.putIfAbsent("abc", 10);
+  ```
 - 2차원 배열 이상에서 인덱스 사용하기
   ```java
   int arr[][] = new int[10][2];
