@@ -6,3 +6,8 @@
   print(rs)
   ```          
   
+## PIP
+- pygraphviz 설치
+  - $ `apt update`
+  - $ `apt install graphviz graphviz-dev`
+  - $ `pip install pygraphviz`
