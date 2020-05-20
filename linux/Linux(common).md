@@ -137,25 +137,28 @@
 ## Swap 관리
 - swap file 추가
   - 큰 파일 생성
-    - `fallocate -l 2GB swap_temp`
+    - $ `mkdir /swap`
+    - $ `fallocate -l 4GB swapfile`
     - 파일 권한 변경
-      - `chmod 600 swap_temp`
+      - `chmod 600 /swap/swapfile`
     - 파일 소유주 및 그룹 변경
-      - `sudo chown root:root swap_temp`
+      - `sudo chown root:root /swap/swapfile`
   - 스왑 파일 시스템 생성
-    - `sudo mkswap swap_temp`
+    - `sudo mkswap /swap/swapfile`
   - 활성화
-    - `sudo swapon swap_temp`
+    - `sudo swapon /swap/swapfile`
       - -p 우선순위 : 해당 스왑 파일의 우선순위를 설정
   - 부팅시에 스왑 마운트
     - `sudo vi /etc/fstab`
+      - 다음 라인을 추가
+        - `/swap/swapfile swap  default 0 0`
 - swap file 제거
   - 부팅시에 스왑 마운트 취소
     - `sudo vi /etc/fstab`
   - 비활성화
-    - `sudo swapoff swap_temp`
+    - `sudo swapoff /swap/swapfile`
   - 스왑 파일 삭제
-    - `sudo rm swap_temp`
+    - `sudo rm /swap/swapfile`
 
 ## Network
 - 고정 IP 설정
