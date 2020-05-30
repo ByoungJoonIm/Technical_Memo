@@ -43,6 +43,9 @@
   - BCNF(Boyce and Codd Normal Form) : 모든 결정자가 후보키 집합에 속한 정규형
     - 후보키가 아닌 속성이 다른 속성을 결정해서는 안됨
   - 제 4 정규형(Fourth Normal Form) : 다중값 종속을 해결한 정규형
+- 다대다 테이블
+  - 실제 설계시, 스키마간의 연결은 하나의 새로운 테이블을 정의해야함
+    - ex) 스키마 A와 B가 있다면 각각 A와 B의 주키를 외래키로하는 새로운 테이블 C를 정의
 
 ## Entiry-Relationship 모델
 - 약 엔티티 집합(Weak Entiry Sets)
