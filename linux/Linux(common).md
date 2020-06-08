@@ -66,7 +66,10 @@
   sudo apt-get install putty-tools
   sudo puttygen ppkkey.ppk -O private-openssh -o pemkey.pem
   ```
-- [참고](https://aws.amazon.com/ko/premiumsupport/knowledge-center/convert-pem-file-into-ppk/)
+  - [참고](https://aws.amazon.com/ko/premiumsupport/knowledge-center/convert-pem-file-into-ppk/)
+- 공개키, 비밀키 쌍 만들기
+  - $ `ssh-keygen`
+
 ### 일반 접속
 - $ `ssh user@hostName`
 
