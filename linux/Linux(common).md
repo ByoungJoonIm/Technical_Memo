@@ -84,6 +84,10 @@
   - $ `dpkg -l`
 - openjdk 설치
   - $ `apt install openjdk-8-jdk`
+- apt-add-repository 사용을 위한 패키지 설치
+  - $ `apt install software-proprties-common -y`
+  - Asia 코드 : 6
+  - Seoul 코드 : 69
 
 ## bash shell 문법
 - 파라미터가 있는지 체크하는 구문
