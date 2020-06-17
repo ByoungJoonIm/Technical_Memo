@@ -28,3 +28,20 @@ E | 1111 | 240 ~ 255 | - | - | -
   - 네트워크 127은 루프백 주소(localhost)로 사용된다
   - 호스트 0번은 네트워크 주소 자체를 나타낸다
   - 호스트 255번은 브로드캐스트 주소이다
+
+### 연결 수립과 해제
+- 3-way-handshake(연결)
+  1. client는 서버에게 SYN(a)를 전송한다.
+  2. server는 ACK(a+1)와 SYN(b)를 client에게 전송한다.
+  3. client는 ACK(b+1)를 전송한다.
+  
+- 4-way-handshake(연결 해제)
+  - server와 client의 초기 상태는 ESTABLISHED이다.
+  1. client는 상태를 FIN_WAIT1로 바꾸고 server에게 FIN을 전송한다.
+  2. FIN을 받은 서버는 ACK를 전송하고, 상태를 CLOSE_WAIT으로 변경한다.
+  3. ACK를 받은 client는 상태를 FIN_WAIT2로 변경한다.
+  4. 데이터 전송을 마친 server는 상태를 LASK_ACK로 바꾸고, client에게 FIN을 전송한다.
+  5. FIN을 받은 client는 ACK를 전송하고, 상태를 TIME_WAIT으로 변경한다.
+  6. ACK를 받은 server는 연결을 해제한다.
+  7. client는 TIME_WAIT 상태에서 timeout되면 연결을 해제한다.
+  
