@@ -180,6 +180,10 @@
   ```
 - 동기화 문제 해결 : 공유자원을 사용하는 메소드에 `synchronized` 키워드 사용
 
+## 응용
+- Collection Interface
+  - [참조](https://www.tutorialspoint.com/java/java_collection_interface.htm)
+
 ## 심화
 ### 객체 정렬
 - comparable [[예제](https://github.com/ByoungJoonIm/Technical_Memo/blob/master/languages/java/ComparableExample.java)]
