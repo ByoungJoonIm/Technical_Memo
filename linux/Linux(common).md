@@ -59,6 +59,14 @@
 - 같은 이름의 프로세스 모두 종료
   - $ `pkill -9 -ef process_name`
 
+### Curl
+- options
+  - -X(--request) : request의 종류를 지정.(GET / POST / PUT / DELETE)
+  - -H(--header) : header를 지정
+  - -d(--data, --data-ascii) : 데이터를 지정
+- example
+  - $ `curl -X POST localhost:8080/employees -H 'Content-type:application/json' -d '{"name": "Samwise Gamgee", "role": "gardener"}'`
+
 ## SSH
 ### Key
 - window의 putty는 .ppk를 사용하지만, 리눅스는 .pem 방식을 사용한다. 따라서 키를 옮겨서 사용하려면 변환이 필요하다.
