@@ -1,6 +1,8 @@
 ## Concept
 - response 객체가 자동으로 json으로 변환되는 이유
   - spring은 Jackson2가 클래스 패스에 있고, 자동으로 객체 인스턴스를 json으로 변환해주기 때문
+- org.springframework.boot.CommandLineRunner
+  - spring-boot는 모든 CommandLineRunner를 실행하므로 log를 기록할 때 유용
 
 ## Annotation
 - @RestController = @Controller + @ResponseBody
