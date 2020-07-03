@@ -60,7 +60,9 @@
   - $ `pkill -9 -ef process_name`
 
 ### Curl
+- URL 전송 도구
 - options
+  - -v(--verbose) : 결과 자세히 보기
   - -X(--request) : request의 종류를 지정.(GET / POST / PUT / DELETE)
   - -H(--header) : header를 지정
   - -d(--data, --data-ascii) : 데이터를 지정
