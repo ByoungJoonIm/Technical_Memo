@@ -4,6 +4,7 @@
 
 ## Annotation
 - @RestController = @Controller + @ResponseBody
+- @Entity = 현재 객체가 JPA-based 데이터로 저장되기 위한 JPA annotation
 
 ## Build
 - Maven
