@@ -208,4 +208,54 @@
 - 공정 P의 임계도(criticality) : EC(i)와 LC(i)의 시간 차이
 - 임계 작업(critical activity) : 임계 경로 상에 있는 작업들
 
+## 해슁(Hashing)
+- 해쉬 함수(Hash function)
+  - key를 0 ~ TableSize -1 까지 매핑하는 함수
+  ```java
+  int hashfunc(int integer_key){
+    return integer_key % HASHTABLEZIE;
+  }
+  ```
+- 충돌 해결법(handling collisions)
+  - separate chaing(closed addressing, 체이닝)
+    - 해쉬 테이블의 각 셀을 linked list로 연결하는 방법
+    - 장점 : 구현이 간단, 해쉬 테이블이 계속해서 확장 가능, 해쉬 함수나 요소를 읽는데 덜 민감, 삽입 삭제의 규모를 모를 때 유용
+    - 단점 : 체이닝의 캐쉬 성능이 떨어짐, 공간이 낭비됨(일부 해쉬 테이블은 사용되지 않음), 체인이 길어지면 탐색시간이 선형( O(n))으로 증가, 링크에 추가 공간을 사용
+    - 시간 복잡도 : 탐색, 삽입, 삭제 시간 = O(1)
+      - 단, 체이닝이 길어질 경우 시간 복잡도는 증가할 수 있다.
+  - open addressing(개방 주소법)
+    - key의 개수보다 table의 개수가 더 많아야 함
+    - 각 table은 state라는 상태를 가져야 한다
+      - state = lazy delete(삭제될 상태) or empty(빈 상태) or occupied(값을 가진 상태)
+    - 연산
+      - 삽입 : 빈 공간을 찾을 때 까지 추가 해싱. 빈 공간이 발견되면 그 위치에 삽입
+      - 탐색 : 빈 공간의 key가 찾고자 하는 key와 일치하는 동안 계속 탐색
+      - 삭제 : 실제 데이터를 삭제하지 않고, 마크 비트만 deleted로 바꿈
+        - insert 연산시 deleted 상태의 슬롯에는 데이터 삽입 가능
+	- search 연산시 state가 lazy delete라면 해당 슬롯은 무시
+    - 중복 해슁 기법(probing, 충돌시 지속적으로 hashing 적용) : 충돌 발생시 다음 해쉬를 결정하는 방법
+      - 선형 탐색법(Linear probing)
+        ```
+        실패시 다음 라인 수행
+        (hash(x) + 0) mod TableSize 
+        (hash(x) + 1) mod TableSize
+        (hash(x) + 2) mod TableSize
+        ...
+        ```
+      - 제곱 탐색법(Quadratic probing)
+        ```
+        실패시 다음 라인 수행
+        (hash(x) + 0^2) mod TableSize 
+        (hash(x) + 1^2) mod TableSize
+        (hash(x) + 2^2) mod TableSize
+        ...
+        ```
+      - 이중 해슁(Double Hashing)
+        ```
+        실패시 다음 라인 수행
+        (hash(x) + 1 * hash2(x)) mod TableSize 
+        (hash(x) + 2 * hash2(x)) mod TableSize
+        (hash(x) + 3 * hash2(x)) mod TableSize
+        ...
+      - 무작위 탐색법(Random probing)
   
