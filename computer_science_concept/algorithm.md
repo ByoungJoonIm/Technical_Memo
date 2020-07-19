@@ -209,6 +209,7 @@
 - 임계 작업(critical activity) : 임계 경로 상에 있는 작업들
 
 ## 해슁(Hashing)
+- reference : (1)[GeeksforGeeks 설명(set2)](https://www.geeksforgeeks.org/hashing-set-2-separate-chaining/) (2)[GeeksforGeeks 설명(set3)](https://www.geeksforgeeks.org/hashing-set-3-open-addressing/) (3)[step by step diagrams](https://www.cse.cuhk.edu.hk/irwin.king/_media/teaching/csc2100b/tu6.pdf)
 - 해쉬 함수(Hash function)
   - key를 0 ~ TableSize -1 까지 매핑하는 함수
   ```java
