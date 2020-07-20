@@ -276,3 +276,7 @@
   bw.write(n.multiply(m) + "\n");
   bw.write(n.add(m) + "\n");
   ```
+
+## Keyword
+- `transient` : 직렬화에서 해당 필드는 유지하되, 값은 제공하지 않겠다는 키워드
+- `volatile` : Read와 Write를 cache에서 수행하지 않고, main memory에 수행한다는 키워드
