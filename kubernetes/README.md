@@ -1,3 +1,7 @@
+## 개념
+- Pod : 하나 이상의 어플리케이션 컨테이너
+- Node : Pod 들을 포함하는 가상/물리 머신
+
 ## 사용법
 - $ `minikube version`
   - 설치된 minikube의 버전을 확인
