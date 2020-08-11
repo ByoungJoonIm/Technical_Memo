@@ -37,6 +37,11 @@
     - 컨테이너 안의 shell을 실행한다.
 - $ `kubectl get services`
   - 서비스 리스트를 출력
+- $ `kubectl scale delployments/kubernetes-bootcamp --replicas=4`
+  - deployments/kubernetes-bootcamp의 replicaSet을 스케일링한다.
+  - $ `kubectl get deployments`로 스케일링 이후에 상태를 확인 가능하다.
+  - $ `kubectl get pods -o wide`로 스케일링 이후 각 팟을 확인할 수 있다.
+  - $ `kubectl describe deployments/kubernetes-bootcamp`로 스케일링 이후에 이벤트에 스케일링 로그가 있는 것을 확인할 수 있다.
 - $ `kubectl delete service -l run=kubernetes-bootcamp`
   - `run=kubernetes-bootcamp`를 라벨로 가진 서비스를 삭제
 - $ `kubectl create deployment [deployment name] --image=[image location]`
