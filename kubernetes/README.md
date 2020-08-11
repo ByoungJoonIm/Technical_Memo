@@ -53,6 +53,9 @@
   - 배포에 대한 상세 정보 확인. 레이블도 함께 확인 가능
 - $ `kubectl label pod $POD_NAME app=v1`
   - $POD_NAME 팟에 app=v1이라는 레이블 등록.
+- $ `kubectl set image deployments/kubernetes-bootcamp kubernetes-bootcamp=jocatalin/kubernetes-bootcamp:v2`
+  - rolling 업데이트 수행. 이미지를 새로운 이미지로 교체
+  - $ `kubectl get pods`를 실행하면 terminating된 pods와 Running중인 pods 확인 가능
 - $ `kubectl expose deployment/kubernetes-bootcamp --type="NodePort" --port 8080`
   - deployment의 특정 팟의 포트를 노출시킨다. 해당 노출 정보는 service에 등록된다.
   - $ `kubectl get services`를 실행하면 추가된 서비스를 확인할 수 있다.
