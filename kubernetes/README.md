@@ -22,7 +22,9 @@
 - $ `kubectl get pods`
   - 현재 구동되고 있는 모든 팟 정보 확인
   - 옵션
-    - `-l` : label을 사용하여 필터링
+    - `-l` : label을 사용하여 필터링 가능
+- $ `kubectl get rs`
+  - deployment에 의해 생성된 ReplicaSet을 보여준다.
 - $ `kubectl describe pods`
   - 현재 구동되고 있는 모든 팟에 대한 상세 정보를 확인. 어떤 컨테이너가 구동되고 있는지, IP가 뭔지, 서비스는 뭐가있는지, 포트는 뭐가 열렸는지 등의 정보 확인 가능
 - $ `cubectl logs $POD_NAME`
