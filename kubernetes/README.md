@@ -1,5 +1,5 @@
 ## 개념
-- Pod : 하나 이상의 어플리케이션 컨테이너
+- Pod : 하나 이상의 어플리케이션 컨테이너를 포함한 개념. 컨테이너, DB등을 포함
 - Node : Pod 들을 포함하는 가상/물리 머신
 
 ## 사용법
@@ -15,6 +15,12 @@
   - 마스터와 DNS가 물리적으로 어떤 서버에서 구동되는지 확인
 - $ `kubectl get nodes`
   - 현재 구동되고 있는 모든 노드 정보 확인
+- $ `kubectl get pods`
+  - 현재 구동되고 있는 모든 팟 정보 확인
+- $ `kubectl describe pods`
+  - 현재 구동되고 있는 모든 팟에 대한 상세 정보를 확인. 어떤 컨테이너가 구동되고 있는지, IP가 뭔지, 서비스는 뭐가있는지, 포트는 뭐가 열렸는지 등의 정보 확인 가능
+- $ `cubectl logs $POD_NAME`
+  - `$POD_NAME` 팟에 대한 로그를 출력한다. 로그는 해당 팟의 STDOUT을 포함한다.
 - $ `kubectl create deployment [deployment name] --image=[image location]`
   - deployment name : 배포에 대해 지어줄 이름
   - --image=[image location] : 이미지가 있는 uri. ex) docker hub container uri
