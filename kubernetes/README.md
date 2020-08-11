@@ -4,6 +4,7 @@
 - Node : Pod 들을 포함하는 가상/물리 머신
 - service : 하나의 논리적인 파드 셋과 그 파드들에 접근할 수 있는 정책을 정의하는 추상적 개념
   - 애플리케이션에 트래픽이 실릴 수 있도록 해준다.
+- deployment : 어플리케이션들을 관리한다.
 
 ## 사용법
 - $ `minikube version`
@@ -20,6 +21,8 @@
   - 현재 구동되고 있는 모든 노드 정보 확인
 - $ `kubectl get pods`
   - 현재 구동되고 있는 모든 팟 정보 확인
+  - 옵션
+    - `-l` : label을 사용하여 필터링
 - $ `kubectl describe pods`
   - 현재 구동되고 있는 모든 팟에 대한 상세 정보를 확인. 어떤 컨테이너가 구동되고 있는지, IP가 뭔지, 서비스는 뭐가있는지, 포트는 뭐가 열렸는지 등의 정보 확인 가능
 - $ `cubectl logs $POD_NAME`
@@ -30,11 +33,27 @@
   - `env` : 명령어로 대체됨
   - $ `kubectl exec -it $POD_NAME bash`
     - 컨테이너 안의 shell을 실행한다.
+- $ `kubectl get services`
+  - 서비스 리스트를 출력
+- $ `kubectl delete service -l run=kubernetes-bootcamp`
+  - `run=kubernetes-bootcamp`를 라벨로 가진 서비스를 삭제
 - $ `kubectl create deployment [deployment name] --image=[image location]`
   - deployment name : 배포에 대해 지어줄 이름
   - --image=[image location] : 이미지가 있는 uri. ex) docker hub container uri
 - $ `kubectl get deployments`
   - 현재 배포된 서비스들의 상태를 확인
+- $ `kubectl describe deployment`
+  - 배포에 대한 상세 정보 확인. 레이블도 함께 확인 가능
+- $ `kubectl label pod $POD_NAME app=v1`
+  - $POD_NAME 팟에 app=v1이라는 레이블 등록.
+- $ `kubectl expose deployment/kubernetes-bootcamp --type="NodePort" --port 8080`
+  - deployment의 특정 팟의 포트를 노출시킨다. 해당 노출 정보는 service에 등록된다.
+  - $ `kubectl get services`를 실행하면 추가된 서비스를 확인할 수 있다.
+  - $ `kubectl describe services/kubernetes-bootcamp` 를 실행하면 해당 서비스의 상세정보를 확인 가능하다. 
+  - $ `export NODE_PORT=$(kubectl get services/kubernetes-bootcamp -o go-template='{{(index .spec.ports 0).nodePort}}')`
+    - NODE_PORT라는 환경변수에 방금 할당받은 포트 번호를 등록한다.
+  - $ `curl $(minikube ip):$NODE_PORT`
+    - 노출된 포트에 접속해서 확인한다.
 - $ `kubectl proxy`
   - 독립된 네트워크의 각각의 Pod들에 엑세스하는 API endpoint를 제공하기 위해 사용. 각각의 PODS은 고립되어 있어서, proxy를 활용하여 컨트롤해야한다.
   - $ `curl http://localhost:8001/version`
