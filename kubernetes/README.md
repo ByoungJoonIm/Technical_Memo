@@ -21,13 +21,19 @@
   - 현재 구동되고 있는 모든 팟에 대한 상세 정보를 확인. 어떤 컨테이너가 구동되고 있는지, IP가 뭔지, 서비스는 뭐가있는지, 포트는 뭐가 열렸는지 등의 정보 확인 가능
 - $ `cubectl logs $POD_NAME`
   - `$POD_NAME` 팟에 대한 로그를 출력한다. 로그는 해당 팟의 STDOUT을 포함한다.
+- $ `kubectl exec $POD_NAME env`
+  - 해당 팟에서 명령어를 실행하고, 결과를 출력한다.
+  - `$POD_NAME` : 팟 이름
+  - `env` : 명령어로 대체됨
+  - $ `kubectl exec -it $POD_NAME bash`
+    - 컨테이너 안의 shell을 실행한다.
 - $ `kubectl create deployment [deployment name] --image=[image location]`
   - deployment name : 배포에 대해 지어줄 이름
   - --image=[image location] : 이미지가 있는 uri. ex) docker hub container uri
 - $ `kubectl get deployments`
   - 현재 배포된 서비스들의 상태를 확인
 - $ `kubectl proxy`
-  - 독립된 네트워크의 각각의 Pod들에 엑세스하는 API endpoint를 제공하기 위해 사용
+  - 독립된 네트워크의 각각의 Pod들에 엑세스하는 API endpoint를 제공하기 위해 사용. 각각의 PODS은 고립되어 있어서, proxy를 활용하여 컨트롤해야한다.
   - $ `curl http://localhost:8001/version`
     - proxy가 구동되고 있다면, JSON 형태로 확인 가능
 - $ `export POD_NAME=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}')`
