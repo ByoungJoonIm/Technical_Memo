@@ -33,3 +33,10 @@
 ### bash(git)
 - 가장 최근의 커밋 내용 변경하기
   - $`git commit --amend -m "new commit message"`
+- User 설정(밑으로 갈수록 우선순위 높음)
+  - System : system 전체
+  - global : 현재 user
+    - $ `git config --global user.name "myName"`
+    - $ `git config --global user.email "myEmail"`
+    - ~/.gitconfig에 내용이 저장된다.
+  - local : 해당 repository만 적용
