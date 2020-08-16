@@ -168,7 +168,7 @@
   - 부팅시에 스왑 마운트
     - `sudo vi /etc/fstab`
       - 다음 라인을 추가
-        - `/swap/swapfile swap  default 0 0`
+        - `/swap/swapfile swap swap defaults 0 0`
 - swap file 제거
   - 부팅시에 스왑 마운트 취소
     - `sudo vi /etc/fstab`
