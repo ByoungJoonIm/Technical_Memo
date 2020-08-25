@@ -79,3 +79,6 @@
   
 ## reference
 - [kubernetes](https://kubernetes.io/ko/docs/tutorials/kubernetes-basics/create-cluster/cluster-interactive/)
+- k3s
+  - [k3s 시리즈 - 간단하게 Kubernetes 환경 구축하기](https://si.mpli.st/dev/2020-01-01-easy-k8s-with-k3s/)
+  - [Kubernetes에서 쉽게 HTTPS 웹 서비스 돌리기](https://si.mpli.st/dev/2020-03-01-k3s-https/)
