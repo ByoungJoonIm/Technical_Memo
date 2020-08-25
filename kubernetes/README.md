@@ -7,6 +7,11 @@
 - deployment : 어플리케이션들을 관리한다.
 - ReplicaSet : pod을 생성 및 갯수 유지
 
+### YAML
+- Port : 쿠버네티스 서비스를 클러스터 안에서 특정 포트로 노출. 같은 클러스터에 있는 다른 팟들은 이 포트로 통신 가능
+- TargetPort : 서비스가 request 날리는 포트로, 이 포트는 pod이 listening하고 있는 포트. 컨테이너 안의 어플리케이션도 이 포트에 대해 listening 상태여야함
+- NodePort : 서비스를 클러스터 밖으로 노출시킴
+
 ## 사용법
 - $ `minikube version`
   - 설치된 minikube의 버전을 확인
