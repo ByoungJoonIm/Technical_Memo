@@ -84,6 +84,10 @@
   
 ## reference
 - [kubernetes](https://kubernetes.io/ko/docs/tutorials/kubernetes-basics/create-cluster/cluster-interactive/)
+  - ingress
+    - [쿠버네티스 Ingress 개념 및 사용 방법, 온-프레미스 환경에서 Ingress 구축하기](https://blog.naver.com/PostView.nhn?blogId=alice_k106&logNo=221502890249&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView)
+    - [쿠버네티스 Ingress의 ClusterIP Bypass, Annotation, SSL/TLS를 위한 인증서 적용](https://blog.naver.com/PostView.nhn?blogId=alice_k106&logNo=221503924911&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView)
 - k3s
   - [k3s 시리즈 - 간단하게 Kubernetes 환경 구축하기](https://si.mpli.st/dev/2020-01-01-easy-k8s-with-k3s/)
   - [Kubernetes에서 쉽게 HTTPS 웹 서비스 돌리기](https://si.mpli.st/dev/2020-03-01-k3s-https/)
+
