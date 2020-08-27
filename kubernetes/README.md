@@ -81,6 +81,30 @@
 - $ `export POD_NAME=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}')`
   - 환경변수 POD_NAME에 pod의 이름을 저장
   
+## K3s
+- 경량화 kubernetes
+- k3s 서비스 종료
+  - $ `k3s-killall.sh`
+- k3s 실행 옵션 변경
+  - $ `sudo vi /etc/systemd/system/k3s.service`
+    ```
+    ExecStart=/usr/local/bin/k3s \
+    server \
+        '--write-kubeconfig-mode' \
+        '644' \
+        '--disable' \
+        'coredns' \
+        '--disable' \
+        'servicelb' \
+        '--disable' \
+        'metrics-server'
+        '--disable' \
+        'traefik' \
+    ```
+    - 맨 밑에 실행 옵션 추가
+  - $ `sudo systemctl daemon-reload`
+  - $ `sudo systemctl restart k3s`
+  
   
 ## reference
 - [kubernetes](https://kubernetes.io/ko/docs/tutorials/kubernetes-basics/create-cluster/cluster-interactive/)
