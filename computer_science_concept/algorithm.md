@@ -260,3 +260,5 @@
         ...
       - 무작위 탐색법(Random probing)
   
+# 알고리즘 기법
+- [KMP 알고리즘](https://bowbowbow.tistory.com/6) : 문자열 검색을 빠르게 하는 알고리즘
