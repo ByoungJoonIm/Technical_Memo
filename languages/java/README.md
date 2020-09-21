@@ -197,6 +197,36 @@
   - `java.util` 패키지에 속하기 때문에, 별도의 import 필요
 - [객체 정렬 개념 참고 사이트](https://gmlwjd9405.github.io/2018/09/06/java-comparable-and-comparator.html) 
 
+### JSON 다루기
+- json의 maven dependency
+  ```xml
+  <dependency>
+    <groupId>org.json</groupId>
+    <artifactId>json</artifactId>
+    <version>20200518</version>
+  </dependency>
+  ```
+- import
+  ```java
+  import org.json.JSONException;
+  import org.json.JSONObject;
+  import org.json.JSONArray;
+  ```
+- 예제
+  ```java
+  //json 형태의 response에서 calls 배열을 jsonArray로 가져옴
+  JSONArray jsonArray = response.getJSONArray("calls")
+  
+  //jsonArray 형태의 배열 사이즈 반환
+  int length = jsonArray.length();
+  
+  //jsonArray에서 0번 인덱스의 객체 가져오기
+  JSONObject jsonObject = jsonArray.getJSONObject(0);
+  
+  //jsonObject에서 하나의 필드를 키값으로 가져오기
+  int id = jsonObject.getInt("id");
+  ```
+  
 ## 그 외 문법
 - 문자열 앞 뒤 공백 제거
   ```java
