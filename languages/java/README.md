@@ -226,7 +226,60 @@
   //jsonObject에서 하나의 필드를 키값으로 가져오기
   int id = jsonObject.getInt("id");
   ```
+
+### URLConnection
+- import
+  ```java
+  import java.net.HttpURLConnection;
+  import java.net.MalformedURLException;
+  import java.net.URL;
+  ```
+- 예제
+  - rest API로 설계된 URL의 json 객체 가져오기(POST, 서버로 보내는 데이터는 없는 경우)
+    ```java
+    HttpURLConnection conn = null;
+    JSONObject responseJson = null;
+    String response = null;
+    
+    try {
+      URL url = new URL(/* hostname + url */);
+      conn = (HttpURLConnection) url.openConnection();
+      conn.setRequestMethod("POST");
+      
+      int responseCode = conn.getResponseCode();
+      
+      if(responseCode == 200){
+        BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+	StringBuilder sb = new StringBuilder();
+	String line = "";
+	
+	while( (line = br.readLine()) != null)
+	  sb.append(line);
+	
+	br.close();
+	responseJson = new JSONObject(sb.toString());
+      } // status code에 따른 조건 추가
+    } catch(MalformedURLException e){
+      // URL이 이상한경우
+    } catch(IOException e){
+      // stream에서 문제가 발생한 경우
+    } catch(JSONException e){
+      // json 포맷에 문제가 생긴경우
+    }
+    ```
+  - rest API로 설계된 URL의 json 객체 가져오기(POST, 서버로 보내는 데이터가 있는 경우 및 헤더설정이 필요한 경우)
+    ```java
+    //위의 코드에 다음을 추가로 적용
+    conn.setRequestProperty("/* header name */", /* value */);
+    conn.setDoOutput(true);	//default=false, POST에 데이터를 쓸 때는 true로 설정
+    BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(conn.getOutputStream()));
+    JSONObject jsonObject = new JSONObject();
+    jsonObject.put("/* key */", /* value or jsonArrya */);
+    bw.write(jsonObject.toString());
+    bw.close();
+    ```
   
+
 ## 그 외 문법
 - 문자열 앞 뒤 공백 제거
   ```java
