@@ -288,8 +288,8 @@
   ```java
   String bin = "101010101010";
   
-  System.out.println((new BigInteger(bin, 2)).intValue());		//2진수를 int 정수형으로 반환
-  System.out.println((new BigInteger(bin, 3)).longValue() + "\n");	//3진수를 long 정수형으로 반환
+  System.out.println((new BigInteger(bin, 2)).intValue());	//2진수를 int 정수형으로 반환
+  System.out.println((new BigInteger(bin, 3)).longValue());	//3진수를 long 정수형으로 반환
   ```
 
 ## 그 외 문법
