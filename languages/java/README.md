@@ -250,14 +250,14 @@
       
       if(responseCode == 200){
         BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-	StringBuilder sb = new StringBuilder();
-	String line = "";
+        StringBuilder sb = new StringBuilder();
+        String line = "";
 	
-	while( (line = br.readLine()) != null)
-	  sb.append(line);
+        while( (line = br.readLine()) != null)
+          sb.append(line);
 	
-	br.close();
-	responseJson = new JSONObject(sb.toString());
+        br.close();
+        responseJson = new JSONObject(sb.toString());
       } // status code에 따른 조건 추가
     } catch(MalformedURLException e){
       // URL이 이상한경우
