@@ -291,6 +291,10 @@
   System.out.println((new BigInteger(bin, 2)).intValue());	//2진수를 int 정수형으로 반환
   System.out.println((new BigInteger(bin, 3)).longValue());	//3진수를 long 정수형으로 반환
   ```
+- 특정 진법의 수로 출력
+  ```java
+  System.out.println(bin.toString(2));
+  ```
 
 ## 그 외 문법
 - 문자열 앞 뒤 공백 제거
