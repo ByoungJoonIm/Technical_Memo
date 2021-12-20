@@ -40,3 +40,14 @@
     - $ `git config --global user.email "myEmail"`
     - ~/.gitconfig에 내용이 저장된다.
   - local : 해당 repository만 적용
+
+## 새로운 프로젝트를 다른 깃허브 계정으로 추가하기
+- `git init`
+- `git checkout -b main`
+- `git config user.name [github user name] --local`
+- `git config user.email [github user email] --local`
+- `git remote add origin git@github.com-me:[Repo name]`
+- `git add .`
+- `git commit -m "initial commit"`
+- `git pull origin main --rebase`
+- `git push --set-upstream origin main`
